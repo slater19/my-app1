@@ -1,0 +1,31 @@
+._ProfileUserReviewsmaindiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    /* border: 1px solid firebrick; */
+}
+._ProfileUserReviewsdiv{
+    /* border: 1px solid darkblue; */
+    width:60%;
+    margin-bottom: 15px;
+}
+._ProfileUserReviews{
+    /* border:1px solid green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+._ProfileUserReviews>div:nth-child(1){
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+._ProfileUserReviewsmaindiv1{
+    width:80%;
+    margin:auto;
+    /* border:1px solid red; */
+    margin-top: 15px;
+}

@@ -1,0 +1,67 @@
+._ProfileEducationMaindiv{
+    /* border:1px solid red; */
+    /* height:400px; */
+    border-radius: 15px;
+    width:60%;
+    margin: auto;
+   margin-top: 20px;
+   margin-bottom: 20px;
+    /* bottom: 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px;
+    /* position: relative;
+   /* top:20px; */
+    /* bottom: 20px; */ 
+}
+._ProfileEducationMain{
+    /* border:1px solid green; */
+    height:90%; 
+}
+._ProfileEducation{
+    /* border:1px solid green; */
+    display:flex;
+    height:10%;
+    /* width: 100%; */
+}
+._ProfileEducation > div{
+    /* border:1px solid blue; */
+    width:50%;
+    /* height:10%; */
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+/* ._ProfileEducation>div:nth-child(2){
+    
+} */
+
+._ProfileEducation > div:nth-child(1){
+    /* border:1px solid forestgreen; */
+    display: flex;
+    align-items: center;
+}
+._ProfileEducation > div:nth-child(2){
+    /* border:1px solid navy; */
+    display: flex;
+    justify-content: right;
+}
+._ProfileEducationImage{
+    /* border:1px solid firebrick; */
+    height:90%;
+    /* margin-top: 15px; */
+}
+
+._ProfileEducationImage>img{
+height:100%;
+width:100%;
+margin-top: 10px;
+}
+._ProfileEducationMain{
+    /* border:1px solid blue; */
+    width:72%;
+    margin-top:15px;
+    margin-bottom: 15px;
+}
