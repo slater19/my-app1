@@ -7,7 +7,7 @@ import Education from '../../Images/Education.jpg'
 export const Notification = () => {
 
 const currentTime=  new Date().toLocaleTimeString();
-
+//notification
     const list=[
 {   Name:"Tanmay RatnaParkhi",
     face: Profileimage,
