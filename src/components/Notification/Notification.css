@@ -86,5 +86,5 @@ position: relative;
 ._Notificationpostimg>div:nth-child(2)>img{
     height:100%;
     width:100%;
-    border:1px solid black;
+    border:1px solid orange;
 }
