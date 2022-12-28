@@ -80,7 +80,7 @@ position: relative;
     height:20%;
 }
 ._Notificationpostimg>div:nth-child(2){
-    border:1px solid yellow;
+    border:1px solid green;
     height:100%;
 }
 ._Notificationpostimg>div:nth-child(2)>img{
