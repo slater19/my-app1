@@ -4,7 +4,7 @@ import './App.css'
 import { Profile } from './components/Profile/Profile'
 import { Search } from './components/Search/Search'
 import { Notification } from './components/Notification/Notification'
-import { Message } from './Messages/Message'
+import { Message } from './components/Messages/Message'
 // import { Profilehistory } from './components/Profilehistory'
 
 function App() {
