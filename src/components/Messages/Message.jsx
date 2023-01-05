@@ -1,8 +1,7 @@
 import React from 'react'
 import './Message.css'
 import Profile from '../../Images/Profile.png';
-import {BsArrowLeft} from 'react-icons/bs'
-import {BsSearch} from "react-icons/bs"
+import {BsArrowLeft,BsSearch} from 'react-icons/bs';
 export const Message = () => {
 
 const arr=[{

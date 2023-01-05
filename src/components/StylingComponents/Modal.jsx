@@ -1,33 +1,45 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 
-export default function BasicModal(p) {
+export default function BasicModal({toggle,func,label,comp,borderRadius,width,height}) {
+
+    const [open, setOpen] = React.useState(toggle);
+console.log("t",toggle);
+
+    // console.log("modal",p.show)
+    
+    useEffect(()=>{
+setOpen(toggle)
+    },[toggle])
+    // console.log(p.comp)
 
     const style = {
         position: 'absolute',
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: p.width,
-        height:p.height,
-        borderRadius:p.borderRadius,
+        width: width,
+        height:height,
+        borderRadius:borderRadius,
         bgcolor: 'background.paper',
-        border: '2px solid rgb(243, 52, 73)',
+        border: '2px solid red',
         boxShadow: 24,
-        p: 4
+        p: 4,
+        // zIndex:0
       };
 
-  const [open, setOpen] = React.useState(true);
 
-  // const handleOpen = () => setOpen(true);
+  // setOpen(p.show)
+  const handleOpen = () => {
+    setOpen(true);
+    console.log(open)
+  };
 
   const handleClose = () => {
-    console.log("handleClose");
-    setOpen(false);
-    console.log(open);
+    func()
   };
 //console.log(open)
   return (
@@ -35,26 +47,28 @@ export default function BasicModal(p) {
       {/* <Button onClick={handleOpen}>Open modal</Button> */}
       <Modal
         open={open}
-        // onClick={handleOpen}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        sx={{border:"1px solid green"}}
       >
+        <div style={{border:"1px solid yellow",zIndex:1}}>
         <Box sx={style} >
+        
           <Typography id="modal-modal-title" variant="h6" component="h2">
-           <div> {p.label}</div>
+           <div> {label}</div>
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            {/* Duis mollis, est non commodo luctus, nisi erat porttitor ligula. */}
             {
-                p.comp.map((el,i)=>{
+                comp.map((el,i)=>{
                         return (
-                        <span key={i}>{el}</span>
-                        )      
+                          <span key={i}>{el}</span>
+                        )    
                 })
             }
           </Typography>
         </Box>
+        </div>
       </Modal>
     </div>
   );

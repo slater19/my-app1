@@ -1,0 +1,94 @@
+._Commentmaindiv{
+    /* border:1px solid red; */
+    margin-bottom: 10px;
+    display: flex;
+    gap:10px;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+._Comment{
+    padding-left: 8px;
+    padding-bottom: 5px;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+._Commentimagediv{
+    /* border:1px solid green; */
+    margin-left: 5px;
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+._Commentimagediv>img{
+    height:100%;
+    width:100%;
+    /* object-fit: contain; */
+}
+/* ._Commentdescription{
+    border:1px solid yellow;
+ }  */
+._Commenttext{
+    border:1.5px solid grey;
+    /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+    height:80px;
+    width:310px;
+    border-radius: 10px;
+    /* box-sizing: border-box;
+    padding: 10px; */
+    /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+}
+._CommentName{
+    font-family: sans-serif;
+    font-weight: 500;
+    box-sizing: border-box;
+    padding: 6px;
+    font-size: 17px;
+}
+._CommentTimeandDate{
+    display: flex;
+    gap:5px;
+    padding-left: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+._Commenttextdescription{
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+._CommentLike{
+    /* border: 1px solid green; */
+    display: flex;
+    height:30px;
+    align-items: center; 
+    gap:10px;
+}
+._CommentLike>div:nth-child(1){
+    /* border:1px solid rebeccapurple; */
+    /* margin-left: 10px; */
+    padding-left: 10px;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+._CommentLike>div:nth-child(2){
+    border-left:1px solid grey;
+    padding-left: 8px;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+._CommentPreviousReply{
+    /* border:1px solid rebeccapurple; */
+    height:20px;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 12px;
+    padding-left: 8px;
+    padding-bottom: 4px;
+    cursor: pointer;
+}

@@ -1,0 +1,173 @@
+._Feed1{
+    /* border:1px solid red; */
+    
+    width:30%;
+    border-radius: 10px;
+    margin:auto;
+    margin-top: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    /* height:400px; */
+}
+._Feedheader{
+    /* border: 1px solid green; */
+    width:100%;
+    /* height: 70px; */
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+    gap:7px;
+}
+/* ._Feedheader>div{
+border:1px solid red;
+} */
+/* ._Feedimage{
+    border:1px solid green;
+    height: 200px;
+}  */
+._Feedimage>img{
+    height:100%;
+    width:100%;
+    object-fit: contain;
+}
+._Feedname{
+    /* border:1px solid firebrick; */
+    width:300px;
+
+}
+/* ._Feedname>div{
+    border:1px solid green
+} */
+._Feedname>div:nth-child(1){
+margin-top: 5px;
+}
+._FeedReaction{
+/* border:1px solid rebeccapurple; */
+height:90px;
+width:100%;
+}
+._Feedstats{
+    /* border:1px solid firebrick; */
+    height:30px;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+._Feedstats>span:nth-child(1){
+    margin-left: 5px;
+}
+._Feedstats>span:nth-child(2){
+    margin-right: 5px;
+}
+._FeedLikes{
+    /* border: 1px solid green; */
+    height:60px;
+    display: flex;
+    gap:5%;
+    justify-content: center;
+}
+._FeedLikes>div{
+    /* border: 1px solid firebrick; */
+    width:20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:12px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+._FeedLikes11{
+    display: flex;
+    gap:5px;
+    align-items: center;
+    cursor: pointer;
+}
+._Feedproimage{
+    /* border:1px solid red; */
+    width:70px;
+    height:70px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+._Feedproimage>img{
+    height:100%;
+    width:100%;
+}
+._Feedoption{
+    /* border:1px solid greenyellow; */
+    height:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+   
+}
+._Feedoption1{
+    position: absolute;
+    top:100%;
+    /* border:1px solid green; */
+    box-sizing: border-box;
+    padding-top: 10px;
+    width:150px;
+    right:-5px;
+    height:100px;
+    background-color: white;
+    display: block;
+    /* transition: 1s all ease-in-out; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+._Feedoption2{
+    position: absolute;
+    top:100%;
+    /* border:1px solid green; */
+    width:150px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    right:-5px;
+    height:100px;
+    background-color: white;
+    display: none;
+    /* transition: 1s all ease-in-out; */
+}
+._Feedname>div:nth-child(1){
+    font-family: sans-serif;
+    font-weight: 600;
+}
+._Feedname>div:nth-child(2){
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    margin-top: 5px;
+}
+._Feedname>div:nth-child(3){
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    margin-top: 5px;
+}
+._Feedoptionlist{
+    display: flex;
+    width:90%;
+    margin:auto;
+    /* border:1px solid red; */
+    align-items: center;
+    gap:15px;
+    font-size: 15px;
+    font-family: sans-serif;
+    /* justify-content: center; */
+    font-weight: 500;
+}
+
+._Feedoptionlist ~ div{
+display: flex;
+/* border:1px solid red; */
+align-items: center;
+gap:15px;
+font-size: 15px;
+font-family: sans-serif;
+width:90%;
+margin:auto;
+font-weight: 500;
+}
