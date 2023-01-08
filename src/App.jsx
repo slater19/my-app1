@@ -8,6 +8,7 @@ import { Search } from './components/Search/Search'
 import { Feed } from './components/Feed/Feed'
 import BasicModal from './components/StylingComponents/Modal'
 import { Share } from './components/Share/Share'
+import { Inbox } from './components/Inbox/Inbox'
 // import { Profilehistory } from './components/Profilehistory'
 
 function App() {
@@ -19,9 +20,10 @@ function App() {
       {/* <Search/> */}
       {/* <Notification/> */}
       {/* <Message/> */}
-      <Feed/>
+      {/* <Feed/> */}
       {/* <BasicModal/> */}
       {/* <Share/> */}
+        <Inbox/>
       
     </div>
   )
