@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-// import { Profile } from './components/Profile/Profile'
+import { Profile } from './components/Profile/Profile'
 import { Search } from './components/Search/Search'
 // import { Notification } from './components/Notification/Notification'
 // import { Message } from './components/Messages/Message'
@@ -23,7 +23,7 @@ function App() {
       {/* <Feed/> */}
       {/* <BasicModal/> */}
       {/* <Share/> */}
-        <Inbox/>
+        {/* <Inbox/> */}
       
     </div>
   )

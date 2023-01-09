@@ -27,8 +27,7 @@ export const Profile = () => {
     <BasicTextFields width={"100%"} label={"Mobile Number"} marginTop={"10px"}/>,
     <p onClick={close} style={{width:"100px",height:"35px", margin:"auto",marginTop:"20px"}}>
          <BasicButtons  width={"100px"} backgroundColor={"#F33449"} label="Update" variant="contained"  margin={"auto"} />
-    </p>
-   
+    </p> 
 ]
 
 

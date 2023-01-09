@@ -4,16 +4,14 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 
-export default function BasicModal({toggle,func,label,comp,borderRadius,width,height}) {
+export default function BasicModal(p) {
 
-    const [open, setOpen] = React.useState(toggle);
-console.log("t",toggle);
+    const [open, setOpen] = React.useState(true);
+// console.log("t",toggle);
 
     // console.log("modal",p.show)
     
-    useEffect(()=>{
-setOpen(toggle)
-    },[toggle])
+  
     // console.log(p.comp)
 
     const style = {
@@ -21,9 +19,9 @@ setOpen(toggle)
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: width,
-        height:height,
-        borderRadius:borderRadius,
+        width: p.width,
+        height:p.height,
+        borderRadius:p.borderRadius,
         bgcolor: 'background.paper',
         border: '2px solid red',
         boxShadow: 24,
@@ -33,13 +31,13 @@ setOpen(toggle)
 
 
   // setOpen(p.show)
-  const handleOpen = () => {
-    setOpen(true);
-    console.log(open)
-  };
+  // const handleOpen = () => {
+  //   setOpen(true);
+  //   console.log(open)
+  // };
 
   const handleClose = () => {
-    func()
+    setOpen(false)
   };
 //console.log(open)
   return (
@@ -56,11 +54,11 @@ setOpen(toggle)
         <Box sx={style} >
         
           <Typography id="modal-modal-title" variant="h6" component="h2">
-           <div> {label}</div>
+           <div> {p.label}</div>
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             {
-                comp.map((el,i)=>{
+                p.comp.map((el,i)=>{
                         return (
                           <span key={i}>{el}</span>
                         )    
