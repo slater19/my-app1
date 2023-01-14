@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './Profile.css';
 import profile from "../../Images/profile.png"
 import { FaPen } from 'react-icons/fa'
-import { BsFillPatchCheckFill } from 'react-icons/BS'
 import { FaBriefcase } from 'react-icons/fa'
-import { BsFillEnvelopeFill } from 'react-icons/BS'
+// import { BsFillEnvelopeFill ,BsFillPatchCheckFill} from 'react-icons/BS'
+import VerifiedIcon from '@mui/icons-material/Verified';
 import { AiFillStar } from 'react-icons/ai'
 import { Profilehistory } from './Profilehistory';
 import BasicButtons from '../StylingComponents/Editbtn';
@@ -12,6 +12,7 @@ import { IoSave } from "react-icons/io5";
 import {FaPencilAlt} from "react-icons/fa";
 import BasicTextFields from '../StylingComponents/inputstyle';
 import BasicModal from '../StylingComponents/Modal';
+import EmailIcon from '@mui/icons-material/Email';
 
 export const Profile = () => {
 
@@ -52,9 +53,10 @@ export const Profile = () => {
                 <div>
                 <h1 className='_Profilename' onClick={show1}>Vaibhav Manral <FaPen style={{ height: "27" ,cursor:"pointer"}} /> </h1>
                 <h3 className='_Profileemail'> 
-                    <BsFillEnvelopeFill style={{ height: "20", position: "relative", bottom: "-4", }} /> 
+                <EmailIcon style={{ height: "25", position: "relative", bottom: "-6" }}/>
                         vabmanral@gmail.com 
-                    <BsFillPatchCheckFill style={{ height: "20", position: "relative", bottom: "-2" }}/>
+                        <VerifiedIcon style={{ height: "25", position: "relative", bottom: "-6", }} />
+                    {/*  */}
                 </h3>
                 { display?<div className='_ProfileEdit'>
                         <BasicTextFields label={"Name"} width={"90%"} variant={"standard"} marginTop={"15px"}/>
