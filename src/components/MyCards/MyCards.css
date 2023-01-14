@@ -1,0 +1,88 @@
+.circle-icon {
+    background: green;
+    height: 37px;
+    border-radius: 50%;
+    margin-bottom: 9px;
+    color: white;
+    }
+
+.main
+{
+display: flex;
+flex-flow: column;
+margin-right: 37px;
+margin-left: 37px;
+}
+
+.image
+{
+  margin: auto;
+  height:560px;
+  text-align: center;
+  position: relative;
+  width: 330px;
+  
+  margin-bottom: 11px;
+  z-index: -1;
+  border-radius: 20px;
+  border: transparent;
+  
+}
+
+.image1
+{
+  margin: auto;
+  height:38px;
+  
+  position: relative;
+  top: 74px;
+  left: 150px;
+  z-index: 0;
+}
+
+
+.circletag{
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: red;
+  z-index: 0;
+  text-align: center;
+} 
+.circletag img{
+  margin: auto;
+  height: 29px;
+  text-align: center;
+  position: relative;
+  top: 20px;
+  z-index: 1;
+  margin-bottom: 11px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.footer{
+    display: flex;
+    flex-flow: row;
+    list-style: none;
+    margin: 0;  
+    position: relative;
+    top: 11px;
+    left:50px;
+    justify-content: center;
+    
+    
+  }
+  
+  .footer div{margin: 20px; text-align: center;}
+
+
+  .flexbox-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+  }

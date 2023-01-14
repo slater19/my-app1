@@ -1,0 +1,61 @@
+.circle-icon {
+    background: red;
+    height: 30px;
+    border-radius: 50%;
+    margin-bottom: 11px;
+    }
+
+.main
+{
+display: flex;
+flex-flow: column;
+}
+
+.image
+{
+  margin: auto;
+  height:500px;
+  text-align: center;
+  position: relative;
+  top: 20px;
+  right: 10px;
+  margin-bottom: 11px;
+  z-index: -1;
+  border-radius: 20px;
+  border: transparent;
+  
+}
+
+.image1
+{
+  margin: auto;
+  height:38px;
+  
+  position: relative;
+  top: 65px;
+  left: 110px;
+  z-index: 0;
+}
+.image2
+{
+  margin: auto;
+  height: 11px;
+  text-align: center;
+  position: relative;
+  top: 20px;
+  right: 10px;
+  margin-bottom: 11px;
+}
+
+.footer5{
+    display: flex;
+    flex-flow: row;
+    list-style: none;
+    margin: 0;  
+    position: relative;
+    top: 11px;
+    right: 6px;
+    
+  }
+  
+  .footer5 div{ margin: auto; text-align: center;}
