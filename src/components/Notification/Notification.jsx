@@ -9,7 +9,7 @@ import {MdDeleteOutline} from 'react-icons/md'
 export const Notification = () => {
 
 const currentTime=  new Date().toLocaleTimeString();
-
+//notification
     const list=[
 {   Name:"Tanmay RatnaParkhi",
     face: Profileimage,
@@ -18,7 +18,7 @@ const currentTime=  new Date().toLocaleTimeString();
     time:currentTime,
 },
 {   
-    Name:"Tanmay RatnaParkhi",
+    Name:"Tanmay ",
     face:Profileimage,
     heading:"show heading",
     image:Education,

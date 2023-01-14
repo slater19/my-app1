@@ -21,7 +21,15 @@ import { ScanDesig } from './components/ScanCards/ScanDesig'
 //  import countries from "countries-list"
 import { ScanEmail } from './components/ScanCards/ScanEmail'
  import { ScanLand } from './components/ScanCards/ScanLand'
-// import Login from './components/Login/Login'
+ import Login from './components/Login/Login'
+ import Home from './components/Home/Home'
+ import Meetings from './components/Meetings/Meetings'
+ import CardBank from './components/CardBank/CardBank'
+ import SendCard from './components/SendCard/SendCard'
+ import MyCards from './components/MyCards/MyCards'
+ import QrScanner from './components/QrScanner/QrScanner'
+ 
+ 
 
 function App() {
 // console.log(countryNames);
@@ -47,6 +55,16 @@ function App() {
         {/* <Inbox/> */}
         
         <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/meetings" element={<Meetings />} />
+          <Route path="/cardbank" element={<CardBank />} />
+          <Route path="/sendcard" element={<SendCard />} />
+          <Route path="/mycards" element={<MyCards />} />
+          <Route path="/qrscanner" element={<QrScanner />} />
+          
+          
+
           <Route path={"/ScanName"} element={<ScanName/>}></Route>
           <Route path={"/ScanCards"} element={<ScanCards/>}></Route>
           <Route path={"/ScanCompany"} element={<ScanCompany/>}></Route>
