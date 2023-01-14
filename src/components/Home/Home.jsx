@@ -183,9 +183,9 @@ return (
             <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-              <MessageIcon onClick={() => navigate("/message")}/>  
+              <MessageIcon onClick={() => navigate("/Message")}/>  
               </ListItemIcon>
-              <ListItemText primary="Message" onClick={() => navigate("/message")}/>  
+              <ListItemText primary="Message" onClick={() => navigate("/Message")}/>  
             </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
@@ -199,9 +199,9 @@ return (
             <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-              <DocumentScannerOutlinedIcon onClick={() => navigate("/scannedcard")}/>  
+              <DocumentScannerOutlinedIcon onClick={() => navigate("/ScanCards")}/>  
               </ListItemIcon>
-              <ListItemText primary="Scanned Card" />
+              <ListItemText primary="Scanned Card" onClick={() => navigate("/ScanCards")} />
             </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
@@ -253,21 +253,24 @@ return (
     <span class="labels" data-on="Feed" data-off="Cards"></span>
   </label>
   <img  class="newImage" src={myImage1} />
-  <SearchIcon  onClick={() => navigate("/settings")} sx={{
+  <div style={{border:"1px solid yellow"}}>
+  <SearchIcon  onClick={() => navigate("")} sx={{
     width: 300,position:'relative',left:400,
     
   }} fontSize='large'/> 
+  
+  
     
-    <NotificationsNoneIcon  onClick={() => navigate("/settings")}  sx={{
+    <NotificationsNoneIcon  onClick={() => navigate("/Notification")}  sx={{
     width: 300,position:'relative',left:200,
     
   }}fontSize='large' htmlColor="black"/>
     
-    <ForumOutlinedIcon  onClick={() => navigate("/settings")} sx={{
+    <ForumOutlinedIcon   sx={{
     width: 300,
     
   }} fontSize='large' htmlColor="black" /> 
-          
+    </div>      
         </Toolbar>
       </AppBar>
     </Box>
