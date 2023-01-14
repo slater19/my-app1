@@ -32,17 +32,7 @@ import { ScanEmail } from './components/ScanCards/ScanEmail'
  
 
 function App() {
-// console.log(countryNames);
-  // const [count, setCount] = useState(0)
-// let location=useLocation();
-// console.log(location.pathname);
 
-// if(location.pathname.match('/ScanName'))
-//        { 
-// return(
-//   <ScanName/>
-// )
-//        }
   return (
     <div className="App">
       {/* <Profile/> */}

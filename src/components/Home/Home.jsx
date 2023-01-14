@@ -183,9 +183,9 @@ return (
             <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-              <MessageIcon onClick={() => navigate("/message")}/>  
+              <MessageIcon onClick={() => navigate("/Message")}/>  
               </ListItemIcon>
-              <ListItemText primary="Message" onClick={() => navigate("/message")}/>  
+              <ListItemText primary="Message" onClick={() => navigate("/Message")}/>  
             </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
@@ -199,9 +199,9 @@ return (
             <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-              <DocumentScannerOutlinedIcon onClick={() => navigate("/scannedcard")}/>  
+              <DocumentScannerOutlinedIcon onClick={() => navigate("/ScanCards")}/>  
               </ListItemIcon>
-              <ListItemText primary="Scanned Card" />
+              <ListItemText primary="Scanned Card" onClick={() => navigate("/ScanCards")}/>
             </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
@@ -297,7 +297,7 @@ return (
     
     }} fontSize='large' htmlColor="black"/> 
     
-    <MailOutlinedIcon  onClick={() => navigate("/inbox")} sx={{
+    <MailOutlinedIcon  onClick={() => navigate("/Inbox")} sx={{
     width: 300,
     
     }} fontSize='large'/>
