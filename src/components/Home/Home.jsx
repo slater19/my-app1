@@ -202,6 +202,9 @@ return (
               <DocumentScannerOutlinedIcon onClick={() => navigate("/ScanCards")}/>  
               </ListItemIcon>
               <ListItemText primary="Scanned Card" onClick={() => navigate("/ScanCards")} />
+
+            
+
             </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
@@ -300,7 +303,7 @@ return (
     
     }} fontSize='large' htmlColor="black"/> 
     
-    <MailOutlinedIcon  onClick={() => navigate("/inbox")} sx={{
+    <MailOutlinedIcon  onClick={() => navigate("/Inbox")} sx={{
     width: 300,
     
     }} fontSize='large'/>
