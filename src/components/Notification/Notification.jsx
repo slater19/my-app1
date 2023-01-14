@@ -16,7 +16,7 @@ const currentTime=  new Date().toLocaleTimeString();
     time:currentTime,
 },
 {   
-    Name:"Tanmay RatnaParkhi",
+    Name:"Tanmay ",
     face:Profileimage,
     heading:"show heading",
     image:Education,
