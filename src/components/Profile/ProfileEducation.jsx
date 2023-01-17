@@ -48,16 +48,20 @@ const ProfileEducation = () => {
                     <div className='_ProfileEducationImage'>
                         {/* <img src={Education} /> */}
                         <SelectVariants label={"Select Education Level"} variant={"standard"} data={education} width={"100%"} marginTop={"15px"} />
-                        <BasicTextFields width={"100%"} variant={"standard"} marginTop={"15px"} label={"Enter Course"} />
+                        <BasicTextFields width={"100%"} variant={"standard"} marginTop={"15px"} label={"Enter Course"} />    
                         <BasicTextFields width={"100%"} variant={"standard"} marginTop={"15px"} label={"Enter Institution"} />
                         {/* <BasicTextFields width={"100%"} variant={"standard"} marginTop={"15px"} label={"Enter Institution"}/> */}
                         <SelectVariants label={"Completion status"} variant={"standard"} data={status} width={"100%"} marginTop={"15px"} check={checking} />
                         {
-                            study == "Pursuing" ? <NativePickers label={"Start Year"} marginTop={"15px"} defaultValue={"Start Year"} /> : study == "Year" ?
-                                <>
-                                    <NativePickers label={"Start Year"} marginTop={"15px"} defaultValue={"Start Year"} />
-                                    <NativePickers label={"End Year"} marginTop={"15px"} defaultValue={"End Year"} />
-                                </> : ""
+                            study == "Pursuing" ?
+
+                            <NativePickers label={"Start Year"} width={"100%"} marginTop={"15px"} defaultValue={"Start Year"} /> 
+                            : study == "Year" ?
+
+                                <div style={{border:"1px solid red"}}>
+                                    <NativePickers label={"Start Year"} width={"100%"} marginTop={"15px"} defaultValue={"Start Year"}  />
+                                    <NativePickers label={"End Year"} width={"100%"} marginTop={"15px"} defaultValue={"End Year"} />
+                                </div> : ""
                         }
                          <BasicButtons width={"100px"} backgroundColor={"#F33449"} label="Submit" variant="contained" marginTop={"15px"} margin={"auto"} />
                     </div>:""

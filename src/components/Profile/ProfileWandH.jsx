@@ -48,15 +48,19 @@ const click3=()=>{
 }
 const click4=(e)=>{
   setmove4(e)
+  setmove3(true)
 }
   return (
     <div className='_WorkandHistory'>
       <div className="_WorkandHistorymaindiv">
         <div className='_WorkandHistorymain'>
-        <div >
+        <div>
           <div>Achievements</div>
           <div onClick={click}> 
-          {move ? <BasicButtons icon={<AiOutlinePlus style={{ fontSize: "20px" }}/>} height={"30px"} backgroundColor={"#004788"} width={"80px"} label={"ADD"} variant={"contained"} /> : <BasicButtons height={"30px"} width={"80px"} label={"Save"} variant={"contained"} backgroundColor={"#004788"}/>}
+          {move ? 
+          <BasicButtons icon={<AiOutlinePlus style={{ fontSize: "20px" }}/>} height={"30px"} backgroundColor={"#004788"} width={"80px"} label={"ADD"} variant={"contained"} /> 
+          : 
+          <BasicButtons height={"30px"} width={"80px"} label={"Save"} variant={"contained"} backgroundColor={"#004788"}/>}
           </div>
         </div>
         { 
@@ -110,7 +114,7 @@ const click4=(e)=>{
         </div>
         { 
         move2?"":
-        <div>
+        <div style={{border:"1px solid red",width:"100%"}}>
         <BasicTextFields label={"Title"} marginTop={"15px"}  width={"100%"}/>
         {/* <BasicTextFields label={"Description"} marginTop={"15px"}/> */}
         <MinHeightTextarea fontSize={"18px"} rows={1} borderRadius={"12px"} placeholder={"Description"}
@@ -120,8 +124,8 @@ const click4=(e)=>{
         <BasicTextFields label={"Location"} marginTop={"15px"}  width={"100%"}/>
         <SelectVariants label={"Employment Type"} data={work} marginTop={"15px"} width={"100%"}/>
         <Checkboxes name={"I am currently work in this role"} prop={click4}/>
-        <NativePickers label={"Start Date"} width={"100%"} marginTop={"15px"}/>
-        <NativePickers label={"End Date"} width={"100%"} marginTop={"15px"}/>
+        <NativePickers label={"Start Date"}  marginTop={"15px"} width={"100%"}/>
+        <NativePickers label={"End Date"}  marginTop={"15px"} width={"100%"}/>
 
         
       {
@@ -131,7 +135,10 @@ const click4=(e)=>{
           </div>
           <div onClick={click3}>
         { 
-        move3 ? <BasicButtons icon={<AiOutlinePlus style={{ fontSize: "20px" }}/>} height={"30px"} backgroundColor={"#004788"} width={"80px"} label={"ADD"} variant={"contained"} /> : <BasicButtons height={"30px"} width={"80px"} label={"SAVE"} variant={"contained"} backgroundColor={"#004788"}/>
+        move3 ? 
+        <BasicButtons icon={<AiOutlinePlus style={{ fontSize: "20px" }}/>} height={"30px"} backgroundColor={"#004788"} width={"80px"} label={"ADD"} variant={"contained"} /> 
+        : 
+        <BasicButtons height={"30px"} width={"80px"} label={"SAVE"} variant={"contained"} backgroundColor={"#004788"}/>
         }
           </div>
         </div>:""
@@ -148,7 +155,6 @@ const click4=(e)=>{
       }
         <BasicButtons width={"100px"} backgroundColor={"#F33449"} label="Submit" variant="contained" marginTop={"15px"} margin={"auto"} marginBottom={"20px"}/>
         </div>
-
 }
       </div>
       </div>

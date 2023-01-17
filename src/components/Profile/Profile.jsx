@@ -26,11 +26,10 @@ export const Profile = () => {
     <BasicTextFields width={"100%"} label={"Last Name"} marginTop={"10px"}/>,
     <BasicTextFields width={"100%"} label={"Email Address"} marginTop={"10px"}/>,
     <BasicTextFields width={"100%"} label={"Mobile Number"} marginTop={"10px"}/>,
-    <p onClick={close} style={{width:"100px",height:"35px", margin:"auto",marginTop:"20px"}}>
-         <BasicButtons  width={"100px"} backgroundColor={"#F33449"} label="Update" variant="contained"  margin={"auto"} />
+    <p onClick={close} style={{width:"100px", margin:"auto",marginTop:"2%"}}>
+         <BasicButtons  width={"100px"} backgroundColor={"#F33449"} label="Update" variant="contained"  margin={"auto"} marginTop={"-10px"} />
     </p> 
 ]
-
 
     const[display,setdisplay]=useState(false);
     const[modal,setmodal]=useState(false);
@@ -51,7 +50,7 @@ export const Profile = () => {
 
             <div className='_Profileinfo'>
                 <div>
-                <h1 className='_Profilename' onClick={show1}>Vaibhav Manral <FaPen style={{ height: "27" ,cursor:"pointer"}} /> </h1>
+                <h1 className='_Profilename' onClick={show1}>Vaibhav Manral <FaPen/> </h1>
                 <h3 className='_Profileemail'> 
                 <EmailIcon style={{ height: "25", position: "relative", bottom: "-6" }}/>
                         vabmanral@gmail.com 
@@ -59,9 +58,9 @@ export const Profile = () => {
                     {/*  */}
                 </h3>
                 { display?<div className='_ProfileEdit'>
-                        <BasicTextFields label={"Name"} width={"90%"} variant={"standard"} marginTop={"15px"}/>
-                        <BasicTextFields label={"Designation"} width={"90%"}  variant={"standard"} marginTop={"15px"}/>
-                        <BasicTextFields label={"Location"}  width={"90%"} variant={"standard"} marginTop={"15px"}/>
+                        <BasicTextFields label={"Name"} width={"100%"} variant={"standard"} marginTop={"15px"}/>
+                        <BasicTextFields label={"Designation"} width={"100%"}  variant={"standard"} marginTop={"15px"}/>
+                        <BasicTextFields label={"Location"}  width={"100%"} variant={"standard"} marginTop={"15px"}/>
                     </div>:""}
                 <div className='_Profilestat'>
                     <div className='_Profileconnection'>
@@ -89,9 +88,9 @@ export const Profile = () => {
             </div>
             <div className='_Editbutton' onClick={show}>
                 {
-                    display ?  <BasicButtons  icon={<IoSave style={{fontSize:"30px",color:"white"}}/>} variant={"standard"} backgroundColor={"#16B75E"} width={"80px"}  borderRadius={"50%"} height={"80px"}/> 
+                    display ?  <BasicButtons  icon={<IoSave className="_Editbtnicon"/>} width={"50px"} height={"50px"} borderRadius={"50%"} variant={"standard"} backgroundColor={"#16B75E"} /> 
                     :  
-                    <BasicButtons icon={<FaPencilAlt style={{fontSize:"30px",color:"white"}}/>} variant={"standard"} backgroundColor={"#16B75E"} width={"80px"}  borderRadius={"50%"} height={"80px"}/> 
+                    <BasicButtons icon={<FaPencilAlt className="_Editbtnicon" />} variant={"standard"} width={"50px"} height={"50px"} borderRadius={"50%"} backgroundColor={"#16B75E"} /> 
                 }
           
             </div>
