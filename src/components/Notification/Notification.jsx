@@ -1,11 +1,12 @@
 import React from 'react';
-import { Profile } from '../Profile/Profile';
+// import { Profile } from '../Profile/Profile';
 import './Notification.css';
 import {BsArrowLeft} from 'react-icons/bs';
 import Profileimage from '../../Images/Profile.png'
 import Education from '../../Images/Education.jpg'
 import BasicButtons from '../StylingComponents/Editbtn';
-import {MdDeleteOutline} from 'react-icons/md'
+import {MdDeleteOutline} from 'react-icons/md';
+
 export const Notification = () => {
 
 const currentTime=  new Date().toLocaleTimeString();
