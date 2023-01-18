@@ -44,7 +44,7 @@ const arr=[{
                     <div>
                         {el.Name}
                     </div>
-                    <div >
+                    <div>
                         <p>{el.Profession}</p>
                     </div>
                     <div >

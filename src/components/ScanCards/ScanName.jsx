@@ -13,8 +13,10 @@ export const ScanName = () => {
       <BasicButtons label={"Scan card"} width={"100%"} borderRadius={"20px"} variant={"contained"} margin={"auto"} marginTop={"20px"}/>,
     ]
   return (
-    <div className='_ScanN'>
-        <Cards width={"40%"} height={"450px"} comp={comp}/>
-    </div>
+    
+      <div className='_ScanName'>
+      <Cards width={"100%"} height={"450px"} comp={comp}/>
+      </div>
+    
   )
 }

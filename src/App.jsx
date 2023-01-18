@@ -34,7 +34,7 @@ import { ScanEmail } from './components/ScanCards/ScanEmail'
 function App() {
 
   return (
-    <div className="App">
+    <div>
       {/* <Profile/> */}
       {/* <Search/> */}
       {/* <Notification/> */}
@@ -43,8 +43,15 @@ function App() {
       {/* <BasicModal/> */}
       {/* <Share/> */}
         {/* <Inbox/> */}
-        
-        <Routes>
+        {/* <ScanCards/> */}
+        {/* <ScanName/> */}
+        {/* <ScanWebsite/> */}
+        {/* <ScanLand/> */}
+        {/* <ScanEmail/> */}
+        {/* <ScanDesig/> */}
+        {/* <ScanCountry/> */}
+         
+         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/meetings" element={<Meetings />} />
@@ -52,7 +59,6 @@ function App() {
           <Route path="/sendcard" element={<SendCard />} />
           <Route path="/mycards" element={<MyCards />} />
           <Route path="/qrscanner" element={<QrScanner />} />
-          
           
 
           <Route path={"/ScanName"} element={<ScanName/>}></Route>
@@ -70,7 +76,7 @@ function App() {
           <Route path={"/Feed"} element={<Feed/>}></Route>
           <Route path={"/Share"} element={<Share/>}></Route>
           <Route path={"/Inbox"} element={<Inbox/>}></Route>
-        </Routes>
+        </Routes>  
     </div>
   )
 }

@@ -16,8 +16,14 @@
     /* bottom: 20px; */ 
 }
 ._ProfileEducationMain{
-    /* border:1px solid green; */
+    /* border:2px solid red; */
+    /* width:1000px; */
     height:90%; 
+    /* width:500px; */
+    margin: auto;
+    width:75%;
+    margin-top:15px;
+    margin-bottom: 15px;
 }
 ._ProfileEducation{
     /* border:1px solid green; */
@@ -49,8 +55,9 @@
     justify-content: right;
 }
 ._ProfileEducationImage{
-    /* border:1px solid firebrick; */
+    /* border:1px solid green; */
     height:90%;
+    /* width:100px; */
     /* margin-top: 15px; */
 }
 
@@ -59,9 +66,12 @@ height:100%;
 width:100%;
 margin-top: 10px;
 }
-._ProfileEducationMain{
-    /* border:1px solid blue; */
-    width:72%;
-    margin-top:15px;
-    margin-bottom: 25px;
+
+@media screen and (max-width:600px) {
+    ._ProfileEducationMaindiv{
+        width:80%;
+    }
+    /* ._ProfileEducationImage>BasicTextFields{
+
+    } */
 }

@@ -131,7 +131,7 @@ export const Feed = () => {
                                 </div>
                             </div>
                             <div>
-                                <p>
+                                <p style={{paddingLeft:"2%",textAlign:"left"}}>
                                     {el.heading}
                                 </p>
                             </div>
