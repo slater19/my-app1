@@ -49,7 +49,7 @@
 
 ._Notificationmaindiv>div:nth-child(1) {
     /* border: 1.5px solid blue; */
-    background-color: blue;
+    /* background-color: blue; */
     height: 200px;
     border-radius: 1%;
 }
@@ -100,15 +100,15 @@
     /* border: 1px solid red; */
     height: 15%;
     /* position: relative; */
-    margin-left: 70px;
+    margin-left: 14%;
 
 }
 
 ._Notificationpostimg>div:nth-child(2) {
     /* border: 1px solid black; */
     height: 50%;
-    width: 85%;
-    margin-left: 70px;
+    width: 86%;
+    margin-left: 14%;
 }
 
 ._Notificationpostimg>div:nth-child(2)>img {
@@ -126,6 +126,7 @@
 ._NotificationDateandTime1 {
     /* border: 1px solid yellow; */
     display: flex;
+    align-items: center;
     margin-top: 15px;
 }
 
@@ -138,4 +139,12 @@
     /* border: 1px solid green; */
     width:50%;
     text-align: right;
+}
+@media screen and (max-width:700px) {
+    ._Notification{
+        width:90%;
+    }
+    ._Notificationbar{
+        width:90%;
+    }
 }

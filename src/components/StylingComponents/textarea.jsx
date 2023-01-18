@@ -2,7 +2,7 @@ import React from 'react';
 import TextareaAutosize from '@mui/base/TextareaAutosize';
 
 export default function MinHeightTextarea(p) {
-    // console.log(p)
+    console.log("textarea",p)
   return (
     <TextareaAutosize
       aria-label="minimum height"

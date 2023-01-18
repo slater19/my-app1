@@ -66,12 +66,13 @@ const click4=(e)=>{
         { 
         move?"":
         <div>
-        <BasicTextFields  marginTop={"15px"} type={"file"}   width={"100%"}/>
-        <BasicTextFields label={"Title"} marginTop={"15px"}  width={"100%"}/>
+        <BasicTextFields  marginTop={"15px"} type={"file"} variant={"standard"}  width={"100%"}/>
+        <BasicTextFields label={"Title"} marginTop={"15px"} variant={"standard"} width={"100%"}/>
         {/* <BasicTextFields label={"Description"} marginTop={"15px"}/> */}
         <MinHeightTextarea fontSize={"18px"} rows={1} borderRadius={"12px"} placeholder={"Description"}
-                            fontFamily={"sans-serif"}  width={"98%"} outline={"none"} marginTop={"15px"} height={"50px"}
+                            fontFamily={"sans-serif"}  width={"100%"} outline={"none"} marginTop={"15px"} height={"50px"}
                             border={"1px solid grey"} />
+                            
         <SelectVariants label={"Select Month"} data={months} marginTop={"15px"} width={"100%"}/>
         <SelectVariants label={"Years"} data={years} width={"100%"} marginTop={"15px"}/>
         <BasicButtons width={"100px"} backgroundColor={"#F33449"} label="Submit" variant="contained" marginTop={"15px"} margin={"auto"}/>
@@ -84,17 +85,19 @@ const click4=(e)=>{
         <div>
           <div>Awards and Recognition</div>
           <div onClick={click1}> 
-          {move1 ? <BasicButtons icon={<AiOutlinePlus style={{ fontSize: "20px" }}/>} height={"30px"} backgroundColor={"#004788"} width={"80px"} label={"ADD"} variant={"contained"} /> : <BasicButtons height={"30px"} width={"80px"} label={"Save"} variant={"contained"} backgroundColor={"#004788"}/>}
+          {move1 ? <BasicButtons icon={<AiOutlinePlus style={{ fontSize: "20px" }}/>} height={"30px"} backgroundColor={"#004788"} width={"80px"} label={"ADD"} variant={"contained"} /> 
+          :
+           <BasicButtons height={"30px"} width={"80px"} label={"Save"} variant={"contained"} backgroundColor={"#004788"}/>}
           </div>
         </div>
         { 
         move1?"":
         <div>
-        <BasicTextFields  marginTop={"15px"} type={"file"}   width={"100%"}/>
-        <BasicTextFields label={"Title"} marginTop={"15px"}  width={"100%"}/>
+        <BasicTextFields  marginTop={"15px"} type={"file"} variant={"standard"} width={"100%"}/>
+        <BasicTextFields label={"Title"} marginTop={"15px"} variant={"standard"}  width={"100%"}/>
         {/* <BasicTextFields label={"Description"} marginTop={"15px"}/> */}
         <MinHeightTextarea fontSize={"18px"} rows={1} borderRadius={"12px"} placeholder={"Description"}
-                            fontFamily={"sans-serif"}  width={"98%"} outline={"none"} marginTop={"15px"} height={"50px"}
+                            fontFamily={"sans-serif"}  width={"100%"} outline={"none"} marginTop={"15px"} height={"50px"}
                             border={"1px solid grey"} />
         <SelectVariants label={"Select Month"} data={months} marginTop={"15px"} width={"100%"}/>
         <SelectVariants label={"Years"} data={years} width={"100%"} marginTop={"15px"}/>
@@ -114,14 +117,14 @@ const click4=(e)=>{
         </div>
         { 
         move2?"":
-        <div style={{border:"1px solid red",width:"100%"}}>
-        <BasicTextFields label={"Title"} marginTop={"15px"}  width={"100%"}/>
+        <div style={{width:"100%"}}>
+        <BasicTextFields label={"Title"} variant={"standard"} marginTop={"15px"}  width={"100%"}/>
         {/* <BasicTextFields label={"Description"} marginTop={"15px"}/> */}
         <MinHeightTextarea fontSize={"18px"} rows={1} borderRadius={"12px"} placeholder={"Description"}
-                            fontFamily={"sans-serif"}  width={"98%"} outline={"none"} marginTop={"15px"} height={"50px"}
+                            fontFamily={"sans-serif"}  width={"100%"} outline={"none"} marginTop={"15px"} height={"50px"}
                             border={"1px solid grey"} />
-        <BasicTextFields label={"Work Pace"} marginTop={"15px"}  width={"100%"}/>
-        <BasicTextFields label={"Location"} marginTop={"15px"}  width={"100%"}/>
+        <BasicTextFields label={"Work Pace"} variant={"standard"} marginTop={"15px"}  width={"100%"}/>
+        <BasicTextFields label={"Location"} variant={"standard"} marginTop={"15px"}  width={"100%"}/>
         <SelectVariants label={"Employment Type"} data={work} marginTop={"15px"} width={"100%"}/>
         <Checkboxes name={"I am currently work in this role"} prop={click4}/>
         <NativePickers label={"Start Date"}  marginTop={"15px"} width={"100%"}/>

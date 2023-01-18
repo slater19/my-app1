@@ -24,9 +24,11 @@ const ProfileEducation = () => {
         if (e == "") {
             setstudy("None")
         }
+
         else if (e == "Pursuing") {
             setstudy("Pursuing");
         }
+        
         else if (e == "Year") {
             setstudy("Year");
         }
@@ -58,7 +60,7 @@ const ProfileEducation = () => {
                             <NativePickers label={"Start Year"} width={"100%"} marginTop={"15px"} defaultValue={"Start Year"} /> 
                             : study == "Year" ?
 
-                                <div style={{border:"1px solid red"}}>
+                                <div>
                                     <NativePickers label={"Start Year"} width={"100%"} marginTop={"15px"} defaultValue={"Start Year"}  />
                                     <NativePickers label={"End Year"} width={"100%"} marginTop={"15px"} defaultValue={"End Year"} />
                                 </div> : ""

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Profile.css';
 import profile from "../../Images/profile.png"
 import { FaPen } from 'react-icons/fa'
@@ -16,17 +16,17 @@ import EmailIcon from '@mui/icons-material/Email';
 
 export const Profile = () => {
 
-    const close=()=>{
-        setmodal(!modal)
-        // console.log("checked")
-    }
+    // const close=()=>{
+    //     setmodal(!modal)
+    //     // console.log("checked")
+    // }
 
     const components=[
-    <BasicTextFields width={"100%"} label={"First Name"} marginTop={"10px"}/>,
-    <BasicTextFields width={"100%"} label={"Last Name"} marginTop={"10px"}/>,
-    <BasicTextFields width={"100%"} label={"Email Address"} marginTop={"10px"}/>,
-    <BasicTextFields width={"100%"} label={"Mobile Number"} marginTop={"10px"}/>,
-    <p onClick={close} style={{width:"100px", margin:"auto",marginTop:"2%"}}>
+    <BasicTextFields width={"100%"} variant={"outlined"} label={"First Name"} marginTop={"10px"}/>,
+    <BasicTextFields width={"100%"} variant={"outlined"} label={"Last Name"} marginTop={"10px"}/>,
+    <BasicTextFields width={"100%"} variant={"outlined"} label={"Email Address"} marginTop={"10px"}/>,
+    <BasicTextFields width={"100%"} variant={"outlined"} label={"Mobile Number"} marginTop={"10px"}/>,
+    <p style={{width:"100px", margin:"auto",marginTop:"2%"}}>
          <BasicButtons  width={"100px"} backgroundColor={"#F33449"} label="Update" variant="contained"  margin={"auto"} marginTop={"-10px"} />
     </p> 
 ]
@@ -37,24 +37,31 @@ export const Profile = () => {
     const show=()=>{
             setdisplay(!display)
     }
+    // const change={
+    //     mode:modal
+    // }
+    
     const show1=()=>{
         setmodal(!modal)
+        console.log("modal",modal)
     }
    
     return (
         <div className='_Profilemaindiv'>
-            { modal?<BasicModal label={"Update Profiler"} width={"280px"} height={"300px"} borderRadius={"30px"} comp={components}/>:""}
+            { modal?
+                <BasicModal label={"Update Profiler"} width={"280px"} height={"300px"} borderRadius={"30px"} comp={components}/>
+        :""}
             <div className='_Profileimg'>
                 <img src={profile} />
             </div>
 
             <div className='_Profileinfo'>
                 <div>
-                <h1 className='_Profilename' onClick={show1}>Vaibhav Manral <FaPen/> </h1>
+                <h1 className='_Profilename' >Vaibhav Manral <FaPen onClick={show1} style={{cursor:"pointer"}}/> </h1>
                 <h3 className='_Profileemail'> 
                 <EmailIcon style={{ height: "25", position: "relative", bottom: "-6" }}/>
                         vabmanral@gmail.com 
-                        <VerifiedIcon style={{ height: "25", position: "relative", bottom: "-6", }} />
+                <VerifiedIcon style={{ height: "25", position: "relative", bottom: "-6", }} />
                     {/*  */}
                 </h3>
                 { display?<div className='_ProfileEdit'>

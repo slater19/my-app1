@@ -225,14 +225,9 @@ return (
               <ListItemText primary="Settings" onClick={() => navigate("/settings")}/>  
             </ListItemButton>
             </ListItem>
-
-           
     
-                
-              
         </List>
         
-          
         </Drawer>
         </div>      
         <Box sx={{ flexGrow: 1 }}>
@@ -248,15 +243,13 @@ return (
   edge="start"
   fontSize='large' htmlColor="black" onClick={()=>setOpens(true)}/> 
   
-  
-  
   <label class="toggle new" style={{ width:"100px",position:'relative',left:"400px"}}>
     <input type="checkbox"/>
     <span class="slider"></span>
     <span class="labels" data-on="Feed" data-off="Cards"></span>
   </label>
   <img  class="newImage" src={myImage1} />
-  <div style={{border:"1px solid yellow"}}>
+  <div>
   <SearchIcon  onClick={() => navigate("")} sx={{
     width: 300,position:'relative',left:400,
     
