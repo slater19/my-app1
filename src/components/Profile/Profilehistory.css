@@ -15,7 +15,6 @@ display: flex;
 height:50px;
 justify-content: center;
 align-items: center;
-font-family: sans-serif;
 gap:10%;
 background-color:#d9d9d9 ;
 border-radius: 20px;
@@ -25,20 +24,33 @@ border-radius: 20px;
     height:90%;
     width:20%;
     border-radius: 20px;
-    font-size: 22px;
+    font-size: 100%;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: sans-serif;
+    text-align: center;
   
 }
 ._Profilehistorymenu>div:hover{
     /* border: 1px solid red; */
     background-color: white;
     cursor: pointer;
-
 }
 ._Profilehistoryinfo{
     /* border:1px solid green; */
     width:100%;
     height:90%;
+}
+
+@media screen and (max-width:600px) {
+    ._Profilehistorymenu>div{
+        /* font-size: 14px; */
+        gap:4%;
+        width:27%;
+    }
+    ._Profilehistorymaindiv{
+        width:100%;
+    }
 }

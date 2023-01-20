@@ -3,7 +3,7 @@ import Education from '../../Images/Education.jpg';
 import BasicButtons from '../StylingComponents/Editbtn';
 import BasicTextFields from '../StylingComponents/inputstyle';
 import { Cards } from '../StylingComponents/Cards';
-
+import './ScanWebsite.css'
 export const ScanWebsite = () => {
     const comp=[
         Education,
@@ -12,8 +12,8 @@ export const ScanWebsite = () => {
         <BasicButtons label={"Scan card"} width={"100%"} borderRadius={"20px"} variant={"contained"} margin={"auto"} marginTop={"20px"}/>
     ]
   return (
-    <div>
-         <Cards width={"40%"} height={"450px"} comp={comp}/>
+    <div className="_ScanWebmain">
+         <Cards width={"100%"} height={"450px"} comp={comp}/>
     </div>
   )
 }

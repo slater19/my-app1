@@ -44,9 +44,15 @@ class QrScanner extends Component {
             
           </div>
         </header>
+<<<<<<< HEAD
          {/*  <div id="container">
           <div className="navi"> */}
           {/* <QrReader 
+=======
+          {/* <div id="container">
+          <div className="navi">
+          <QrReader 
+>>>>>>> 0091bcbd6f2c2de6fca8bbd51668337802ad970d
             delay={this.state.delay}
             style={previewStyle}
             onError={this.handleError}

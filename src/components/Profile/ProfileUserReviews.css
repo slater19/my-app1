@@ -4,10 +4,11 @@
     align-items: center;
     margin-top: 20px;
     /* border: 1px solid firebrick; */
+    
 }
 ._ProfileUserReviewsdiv{
     /* border: 1px solid darkblue; */
-    width:60%;
+    width:70%;
     margin-bottom: 15px;
 }
 ._ProfileUserReviews{
@@ -15,7 +16,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
     margin: auto;
 }
 ._ProfileUserReviews>div:nth-child(1){
@@ -24,7 +24,7 @@
     font-weight: 600;
 }
 ._ProfileUserReviewsmaindiv1{
-    width:80%;
+    
     margin:auto;
     /* border:1px solid red; */
     margin-top: 15px;

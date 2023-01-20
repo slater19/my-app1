@@ -80,4 +80,8 @@ const MyCards = () => {const navigate = useNavigate();
   )
 }
 
+<<<<<<< HEAD
 export default MyCards
+=======
+export default MyCards
+>>>>>>> 0091bcbd6f2c2de6fca8bbd51668337802ad970d
