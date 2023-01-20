@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-
+import { Container } from '@mui/system';
 import QrReader from "react-qr-scanner";
+import Grid from '@mui/material/Grid';
+import { AiFillEnvironment } from 'react-icons/ai';
 
-
-
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -43,9 +44,9 @@ class QrScanner extends Component {
             
           </div>
         </header>
-          <div id="container">
-          <div className="navi">
-          <QrReader 
+         {/*  <div id="container">
+          <div className="navi"> */}
+          {/* <QrReader 
             delay={this.state.delay}
             style={previewStyle}
             onError={this.handleError}
@@ -58,7 +59,7 @@ class QrScanner extends Component {
             </div>
             
             
-          <p>{this.state.result}</p>
+          <p>{this.state.result}</p> */}
         </div>
       )
     }

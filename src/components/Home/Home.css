@@ -3,18 +3,36 @@ padding: 0;}
 
 .main
 {
-display: flex;
-flex-flow: column;
+height: 610px;
+position: relative;
+margin: 50px;
+width: 300px;
 }
+
+.header1{
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
+  justify-content: start;
+  list-style: none;
+  margin: 0;  
+  position: relative;
+  top: 12px;
+  
+  
+}
+
+.header1 div{ margin:5px;position: relative;left:66px}
 
 .newImage{
 height: 50px;
 position:relative;
-left:450px;
+
 }
 
 .face5{
   height: 50px;
+  margin-right: 3px;
 }
 
 .navigation {
@@ -68,13 +86,97 @@ left:450px;
     .image
     {
       margin: auto;
-      height:700px;
+      height: 100%;
+      width: 100%;
       text-align: center;
-      position: relative;
-      bottom: 50px;
-      right: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: yellow;
+      z-index: -1;
     } 
+    
+    .card{
+    margin: auto;
+    z-index: 0;
+    background-color: wheat;
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    text-align: center;
+    border: 1pc solid red;
+    border-radius: 10px;
+    }
 
+    /* THE CARD HOLDS THE FRONT AND BACK FACES */
+.thecard{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: all 4s ease;
+}
+
+/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+.thecard:hover{
+  transform: rotateY(180deg);
+}
+
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+ .thefront{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #ffc728;
+  color: #000;
+}
+
+/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+.theback{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #fafafa;
+  color: #333;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+
+/*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+.thefront h1, .theback h1{
+  font-family: 'zilla slab', sans-serif;
+  padding: 30px;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+.thefront p, .theback p{
+  font-family: 'zilla slab', sans-serif;
+  padding: 30px;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+}
+   
+    
+   
     .toggle {
         --width: 80px;
         --height: calc(var(--width) / 3);
