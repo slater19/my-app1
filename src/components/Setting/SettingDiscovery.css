@@ -3,4 +3,18 @@
 }
 ._Discoverydiv{
     border:1px solid green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+._Discoverydivheading{
+    border:1px solid green;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #054E93;
+}
+._Discoverydivicon{
+    position: relative;
+    border:5px solid firebrick;
+    font-size: 20px;   
 }
