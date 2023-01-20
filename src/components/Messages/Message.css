@@ -50,8 +50,11 @@
 }
 ._MessageDiv121{
     /* border:1px solid red; */
-    width:420px;
+    width:100%;
     font-family: sans-serif;
+}
+._MessageDiv121>div>p{
+    text-align: left;
 }
 ._MessageDiv121>div:nth-child(1){
     /* border:1px solid green; */
@@ -67,9 +70,14 @@ width:100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 ._MessageDiv1>div:nth-child(2){
     font-size: 25px;
     font-family: sans-serif;
+}
+
+@media screen and (max-width:700px) {
+    ._MessageDiv2{
+        width:90%;
+    }
 }

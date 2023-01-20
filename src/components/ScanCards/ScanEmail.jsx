@@ -4,7 +4,7 @@ import {Cards} from "../StylingComponents/Cards"
 import Education from "../../Images/Education.jpg"
 import BasicTextFields from '../StylingComponents/inputstyle'
 import BasicButtons from '../StylingComponents/Editbtn'
-
+import "./Scan.css"
 export const ScanEmail = () => {
     const comp=[
         Education,
@@ -14,8 +14,8 @@ export const ScanEmail = () => {
     ]
 
   return (
-    <div>
-        <Cards width={"40%"} height={"450px"} comp={comp}/>
+    <div className='_Scan'>
+        <Cards width={"100%"} height={"450px"} comp={comp}/>
     </div>
   )
 }

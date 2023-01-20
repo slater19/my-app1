@@ -5,7 +5,7 @@
 }  */
 
 ._ProfileOverviewBio{
-    border-bottom: 1px solid gray;
+    /* border-bottom: 1px solid gray; */
     margin: auto;
     width: 80%;
     margin-top: 30px;
@@ -75,4 +75,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+@media screen and (max-width:600px) {
+    ._ProfileOverviewBiomaindiv{
+        width:80%;
+    }
 }
