@@ -51,9 +51,9 @@ function App() {
         {/* <ScanEmail/> */}
         {/* <ScanDesig/> */}
         {/* <ScanCountry/> */}
-        <Setting/>
+        {/* <Setting/> */}
          
-         {/* <Routes>
+         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/meetings" element={<Meetings />} />
@@ -78,7 +78,7 @@ function App() {
           <Route path={"/Feed"} element={<Feed/>}></Route>
           <Route path={"/Share"} element={<Share/>}></Route>
           <Route path={"/Inbox"} element={<Inbox/>}></Route>
-        </Routes>   */}
+        </Routes>   
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Feed.css';
 import Education from '../../Images/Education.jpg';
-import Profile from '../../Images/Profile.png';
+import Profile from '../../Images/profile.png';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
