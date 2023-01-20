@@ -1,6 +1,6 @@
 import React from 'react'
 import './Message.css'
-import Profile from '../../Images/Profile.png';
+import Profile from '../../Images/profile.png';
 import {BsArrowLeft,BsSearch} from 'react-icons/bs';
 export const Message = () => {
 
