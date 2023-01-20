@@ -71,9 +71,9 @@ const CardBank = () => {
   {/*  <div class="navigation"> */}
     <div>
     <AiOutlineUserDelete/>
-    <h6>Refers</h6></div>
+    <h6>Refer</h6></div>
     <div><AiOutlineMessage/>
-    <h6>Messages</h6></div>
+    <h6>Message</h6></div>
     <div><AiOutlineUsergroupAdd/>
     <h6>Assign Group</h6></div>
     <div><RiDeleteBin6Line/><h6>Delete</h6></div>
