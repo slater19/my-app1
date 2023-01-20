@@ -285,7 +285,6 @@ return (
   edge="start"
   fontSize='large' htmlColor="black" onClick={()=>setOpens(true)}/> 
   
-<<<<<<< HEAD
   
   <header class="header1">
   
@@ -307,28 +306,9 @@ return (
     
     <div> <NotificationsNoneIcon  onClick={() => navigate("/notification")}  sx={{
     width: 30/* ,position:'relative',left:200, */
-=======
-  <label class="toggle new" style={{ width:"100px",position:'relative',left:"400px"}}>
-    <input type="checkbox"/>
-    <span class="slider"></span>
-    <span class="labels" data-on="Feed" data-off="Cards"></span>
-  </label>
-  <img  class="newImage" src={myImage1} />
-  <div>
-  <SearchIcon  onClick={() => navigate("")} sx={{
-    width: 300,position:'relative',left:400,
-    
-  }} fontSize='large'/> 
-  
-  
-    
-    <NotificationsNoneIcon  onClick={() => navigate("/Notification")}  sx={{
-    width: 300,position:'relative',left:200,
->>>>>>> d0eb4715a9a6e0e3b6d0b50c56d38c451b03cea1
     
   }}fontSize='large' htmlColor="black"/></div> 
     
-<<<<<<< HEAD
     <div><ForumOutlinedIcon  onClick={() => navigate("/message")} sx={{
     width: 30,
     
@@ -337,14 +317,6 @@ return (
   </header>
           
        </Toolbar> 
-=======
-    <ForumOutlinedIcon   sx={{
-    width: 300,
-    
-  }} fontSize='large' htmlColor="black" /> 
-    </div>      
-        </Toolbar>
->>>>>>> d0eb4715a9a6e0e3b6d0b50c56d38c451b03cea1
       </AppBar>
     </Box>
 
@@ -405,13 +377,8 @@ return (
     
     }} fontSize='large' htmlColor="black"/> 
     
-<<<<<<< HEAD
     <MailOutlinedIcon  onClick={() => navigate("/inbox")} sx={{
     width: 75,
-=======
-    <MailOutlinedIcon  onClick={() => navigate("/Inbox")} sx={{
-    width: 300,
->>>>>>> d0eb4715a9a6e0e3b6d0b50c56d38c451b03cea1
     
     }} fontSize='large'/>
     
