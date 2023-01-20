@@ -10,9 +10,10 @@ import myImage2 from '../../Images/pencil.png';
 import myImage3 from '../../Images/pencil.png';
 import users from '../Data/data';
 import {HiOutlineKey} from 'react-icons/hi';
+import { useNavigate } from "react-router-dom";
 
 
-const SendCard = () => {
+const MyCards = () => {const navigate = useNavigate();
   return (
     <div>
          <header className="Navbar">
@@ -30,17 +31,34 @@ const SendCard = () => {
        
         <img  class="image1" src={myImage1}/> <br/>
         <img  class="image" src={myImage}/> <br/>  
-
+        
 
   
    <br/>   
+
+   
+  
+  <footer class="footer">
+  <div class="circletag">
+    <img   src={myImage2}/> 
+    </div>
+    <div><HiOutlineKey class="circle-icon" size={37}/></div>
+    <div>         <DeleteOutlinedIcon    sx={{ 
+    color: "white", 
+    backgroundColor: "red", 
+    borderRadius: "50%" 
+
+  }} fontSize="large"/>
+    </div>
+    </footer>
+    
    </div>
   
   
   
   )})}
    </div>
-  <div class="flexbox-container">
+{/*   <div class="flexbox-container">
   {users.map(user=>{
        return(
   <footer class="footer">
@@ -56,10 +74,10 @@ const SendCard = () => {
   }} fontSize="large"/>
     </div>
     </footer>)})}
-    </div> 
+    </div>  */}
 
     </div>
   )
 }
 
-export default SendCard
+export default MyCards

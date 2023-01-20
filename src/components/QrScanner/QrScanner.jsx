@@ -43,7 +43,7 @@ class QrScanner extends Component {
             
           </div>
         </header>
-          <div id="container">
+          {/* <div id="container">
           <div className="navi">
           <QrReader 
             delay={this.state.delay}
@@ -58,7 +58,7 @@ class QrScanner extends Component {
             </div>
             
             
-          <p>{this.state.result}</p>
+          <p>{this.state.result}</p> */}
         </div>
       )
     }

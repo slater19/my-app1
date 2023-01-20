@@ -12,6 +12,14 @@ import AddCardOutlinedIcon from '@mui/icons-material/AddCardOutlined';
 import NearMeOutlinedIcon from '@mui/icons-material/NearMeOutlined';
 import Groups3OutlinedIcon from '@mui/icons-material/Groups3Outlined';
 import Button from '@mui/material/Button';
+import myImage5 from '../../Images/O4YINS0.jpg';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import  { Component } from 'react';
+
+
 
 import * as React from 'react';
 
@@ -44,13 +52,44 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import { useNavigate } from "react-router-dom";
 
+import { CSSTransition } from 'react-transition-group';
+
+
+import Switch from '@mui/material/Switch';
+import Paper from '@mui/material/Paper';
+import Grow from '@mui/material/Grow';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import { red } from '@mui/material/colors';
+
+
 
 function Home() {
 
 const [opens,setOpens]=React.useState(false);
 const navigate = useNavigate();
+const [state, setState] = React.useState({
+  checkedA: true,
+});
+const [checked, setChecked] = React.useState(false);
+const [checked0, setChecked0] = React.useState(false);
+const [checked1, setChecked1] = React.useState(false);
+
+const handleChange = () => {
+  setChecked((prev) => !prev);
+};
+
+const handleChange0 = () => {
+  setChecked0((prev) => !prev);
+};
+
+const handleChange1 = () => {
+  setChecked1((prev) => !prev);
+};
+
+
 
 return (
+
 <div>
 
 
@@ -61,18 +100,18 @@ return (
          
           
           PaperProps={{
-            sx: { width: "30%" },
+            sx: { width: "66%" },
           }}
             
            open={opens} onClose={()=>setOpens(false)}>
-        <Box display="flex" p={4} mt={3} ml={5}  fontWeight={500}>
+        <Box display="flex" p={4} mt={3}   fontWeight={500}>
         
         <img  class="face5" src={myImage1} />
         <Box display="flex" sx={{ flexDirection: 'column' }}>
         <Typography>
-        <Box  ml={5}  fontWeight="fontWeightBold">Sachin Aggarwal
+        <Box   fontWeight="fontWeightBold">Sachin Aggarwal
         </Box> 
-        <Box mt={2} mb={5} fontWeight="fontWeightLight" fontSize={20} ml={5}>Your Designation Here
+        <Box mt={2} mb={5} fontWeight="fontWeightLight" fontSize={12} >Your Designation Here
         </Box> 
         </Typography>
         <Button variant="contained" sx={{
@@ -231,94 +270,138 @@ return (
         
           
         </Drawer>
+
         </div>      
         <Box sx={{ flexGrow: 1 }}>
       <AppBar sx={{
-    height: 120,
+    height: 75,
+    
   
   }}  color="default" position="static">
         <Toolbar>
         <MenuOpenIcon  sx={{
-    width: 300,
+    width: 30,
+    position:'relative',
   
   }} 
   edge="start"
   fontSize='large' htmlColor="black" onClick={()=>setOpens(true)}/> 
   
   
+  <header class="header1">
   
-  <label class="toggle new" style={{ width:"100px",position:'relative',left:"400px"}}>
-    <input type="checkbox"/>
-    <span class="slider"></span>
-    <span class="labels" data-on="Feed" data-off="Cards"></span>
-  </label>
-  <img  class="newImage" src={myImage1} />
-  <SearchIcon  onClick={() => navigate("/settings")} sx={{
-    width: 300,position:'relative',left:400,
+  <div>
+   
+      <FormControlLabel
+        control={<Switch color='error' size='medium' checked={checked} onChange={handleChange} />}
+      />
+     
+    </div>
+ 
+ 
+  <div><img  class="newImage" src={myImage1} onClick={() => navigate("/profile")}/></div> 
+  
+  <div><SearchIcon  onClick={() => navigate("/search")} sx={{
+    width: 30/* ,position:'relative',left:400, */
     
-  }} fontSize='large'/> 
+  }} fontSize='large'/> </div> 
     
-    <NotificationsNoneIcon  onClick={() => navigate("/settings")}  sx={{
-    width: 300,position:'relative',left:200,
+    <div> <NotificationsNoneIcon  onClick={() => navigate("/notification")}  sx={{
+    width: 30/* ,position:'relative',left:200, */
     
-  }}fontSize='large' htmlColor="black"/>
+  }}fontSize='large' htmlColor="black"/></div> 
     
-    <ForumOutlinedIcon  onClick={() => navigate("/settings")} sx={{
-    width: 300,
+    <div><ForumOutlinedIcon  onClick={() => navigate("/message")} sx={{
+    width: 30,
     
-  }} fontSize='large' htmlColor="black" /> 
+  }} fontSize='large' htmlColor="black" /> </div> 
+
+  </header>
           
-        </Toolbar>
+       </Toolbar> 
       </AppBar>
     </Box>
-<Toolbar/>
 
 
-<article class="main">
+    <article class="main" >
+  {/*  <img  class="image" src={myImage}/> */}
 
-<img  class="image" src={myImage}/> <br/>  
-   <label class="toggle new" style={{ width:"100px",position:'relative',bottom:"31px"}}>
-    <input type="checkbox"/>
-    <span class="slider"></span>
-    <span class="labels" data-on="View Card" data-off="View profile"></span>
-  </label>
+   
+    <img  class="image" src={myImage}/> 
+ {/*  <FormControlLabel sx={{margin:'auto',zIndex:1,position:'relative',textAlign:'center',left:140}}
+      value={"yes"} control={<Switch size='medium' color='error' checked={checked0}  onChange={handleChange0}  />}
+   />
+    {/* <Card class="image" >abcd</Card> */}
+      
+       
+{/*       {checked1 &&  <Card class="card">
+      <FormControlLabel sx={{margin:'auto',zIndex:1,position:'relative',}}
+    control={<Switch size='medium' color='error' checked={checked1}  onChange={handleChange1}  />}
+   />
+         </Card>} */}
+
+         <div class="thecard">
+{/* {checked1 &&  <Card class="card"></Card>} */}
+{checked1 &&<div class="thefront"><h1>Front of Card</h1><p>This is the front of the card. It contains important information. Please see overleaf for more details.</p></div>
+}
+{checked1 &&
+<div class="theback"><h1>Back of Card</h1><p>Your use of this site is subject to the terms and conditions governing this and all transactions.</p>
+</div>}
+</div>
+        </article>
+
+    
+ 
   
-  </article>
+  
+   <FormControlLabel sx={{margin:'auto',zIndex:1,position:'relative',}}
+    control={<Switch size='medium' color='error' checked={checked1}  onChange={handleChange1}  />}
+   />
+  
+  
 
+  
+  
+  
+  
+  
+  
   <Box sx={{ flexGrow: 1 }}>
   <AppBar sx={{
     height: 120,
+    
   
   }} color="default" position="static">
         <Toolbar>
  {/*  <div class="navigation"> */}
   <Groups3OutlinedIcon  onClick={() => navigate("/meetings")} sx={{
-    width: 300,
+    width: 75,
     
     }} fontSize='large' htmlColor="black"/> 
     
     <MailOutlinedIcon  onClick={() => navigate("/inbox")} sx={{
-    width: 300,
+    width: 75,
     
     }} fontSize='large'/>
     
     <DesignServicesOutlinedIcon onClick={() => navigate("/design")}   sx={{
-    width: 300,
+    width: 75,
     
     }} fontSize='large' htmlColor="black"/>  
     
     <NearMeOutlinedIcon onClick={() => navigate("/sendcard")}  sx={{
-    width: 300,
+    width: 75,
     
   }} fontSize='large' htmlColor="black"/> 
     <AddCardOutlinedIcon onClick={() => navigate("/cardbank")} sx={{
-    width: 300,
+    width: 75,
     
   }} fontSize='large' htmlColor="black"/> 
+        
 {/* </div> */}
 </Toolbar></AppBar></Box>
   </div>
-   
+  
 )
 }
 
