@@ -31,7 +31,7 @@ const styles1={
             {
                 p.comp.map((el,i)=>{
 
-                    if(i==0){
+                    if(el.filetype==".png" || el.filetype==".jpg"){
                         return(
                             <div key={i} className='_Cardsimage'>
                                 <img src={el}/>

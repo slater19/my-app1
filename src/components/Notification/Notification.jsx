@@ -2,7 +2,7 @@ import React from 'react';
 // import { Profile } from '../Profile/Profile';
 import './Notification.css';
 import {BsArrowLeft} from 'react-icons/bs';
-import Profileimage from '../../Images/Profile.png'
+import Profileimage from '../../Images/profile.png'
 import Education from '../../Images/Education.jpg'
 import BasicButtons from '../StylingComponents/Editbtn';
 import {MdDeleteOutline} from 'react-icons/md';

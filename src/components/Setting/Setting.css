@@ -4,8 +4,8 @@
     position: relative;
     height:50px;
     gap:35%;
-   box-shadow:  rgb(0 0 0 / 5%) 0px 6px 24px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 1px;
-    /* border: 1px solid yellow; */
+    box-shadow:  rgb(0 0 0 / 5%) 0px 6px 24px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 1px;
+    border: 1px solid yellow;
     /* flex-wrap: nowrap; */
     /* justify-content: space-around; */
 }
