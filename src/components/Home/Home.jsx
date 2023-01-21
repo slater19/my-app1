@@ -249,9 +249,9 @@ function Home() {
               <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                <DocumentScannerOutlinedIcon onClick={() => navigate("/scannedcard")}/>  
+                <DocumentScannerOutlinedIcon onClick={() => navigate("/ScanCards")}/>  
                 </ListItemIcon>
-                <ListItemText primary="Scanned Card" />
+                <ListItemText primary="Scanned Card" onClick={() => navigate("/ScanCards")}/>
               </ListItemButton>
               </ListItem>
               <ListItem disablePadding>
