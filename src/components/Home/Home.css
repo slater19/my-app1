@@ -3,7 +3,7 @@ padding: 0;}
 
 .main
 {
-height: 610px;
+height: 560px;
 position: relative;
 margin: 50px;
 width: 300px;
@@ -112,19 +112,35 @@ position:relative;
 
     /* THE CARD HOLDS THE FRONT AND BACK FACES */
 .thecard{
+  margin: auto;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   border-radius: 10px;
   transform-style: preserve-3d;
   transition: all 4s ease;
+  perspective: 1000px;
+  
 }
 
 /* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
-.thecard:hover{
+/* .thecard:hover{
   transform: rotateY(180deg);
+} */
+
+.isflipped {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: all 4s ease;
+  perspective: 1000px;
+  transform: rotateY(180deg);
+  
 }
 
 /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
@@ -135,7 +151,7 @@ position:relative;
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  backface-visibility: hidden;
+   /* backface-visibility: hidden;  */
   overflow: hidden;
   background: #ffc728;
   color: #000;
@@ -149,7 +165,7 @@ position:relative;
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  backface-visibility: hidden;
+   backface-visibility: hidden; 
   overflow: hidden;
   background: #fafafa;
   color: #333;
