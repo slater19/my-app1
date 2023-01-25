@@ -60,6 +60,11 @@ import Grow from '@mui/material/Grow';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { red } from '@mui/material/colors';
 
+import data from '../Data/data';
+import users from '../Data/data';
+
+import {useState} from "react";
+import { useSwipeable } from "react-swipeable";
 
 
 function Home() {
@@ -71,6 +76,22 @@ function Home() {
   });
   
   
+  const [currImg, setCurrImg] = useState(1);
+  
+  const handlersBox = useSwipeable({
+    
+    onSwiped: ({ dir, event }) => {
+      // NOTE: this stops the propagation of the event
+      // from reaching the document swipe listeners
+      event.stopPropagation();
+      if(dir==='Right'){currImg < data.length - 1 && setCurrImg(currImg+1);}
+      if(dir==='Left'){ currImg > 0 && setCurrImg(currImg-1);}
+    
+      },
+     // NOTE: another approach via onSwiping
+    // onSwiping: ({ event }) => event.stopPropagation(),
+    preventDefaultTouchmoveEvent: true
+  });
   
   
   
@@ -86,6 +107,7 @@ function Home() {
   const handleChange = () => {
     
     setChecked((prev) => !prev);
+    navigate("/feed");
   };
   
   const handleChange0 = () => {
@@ -117,7 +139,7 @@ function Home() {
              open={opens} onClose={()=>setOpens(false)}>
           <Box display="flex" p={4} mt={3}   fontWeight={500}>
           
-          <img  class="face5" src={myImage1} />
+          <img  class="face5" src={myImage1} onClick={() => navigate("/profile")}/>
           <Box display="flex" sx={{ flexDirection: 'column' }}>
           <Typography>
           <Box   fontWeight="fontWeightBold">Sachin Aggarwal
@@ -247,11 +269,11 @@ function Home() {
               </ListItemButton>
               </ListItem>
               <ListItem disablePadding>
-              <ListItemButton onClick={() => navigate("/ScanCards")}>
+              <ListItemButton>
                 <ListItemIcon>
-                <DocumentScannerOutlinedIcon onClick={() => navigate("/ScanCards")}/>  
+                <DocumentScannerOutlinedIcon onClick={() => navigate("/scancards")}/>  
                 </ListItemIcon>
-                <ListItemText primary="Scanned Card" onClick={() => navigate("/ScanCards")}/>
+                <ListItemText primary="Scanned Card" onClick={() => navigate("/scancards")} />
               </ListItemButton>
               </ListItem>
               <ListItem disablePadding>
@@ -333,12 +355,13 @@ function Home() {
         </AppBar>
       </Box>
   
-  
-      <article class="main" >
+     
+      <article class="main" {...handlersBox}>
     {/*  <img  class="image" src={myImage}/> */}
-  
-      
-      <img  class="image" src={myImage} /> 
+   
+   
+       
+      <img class="image" src={users[currImg].img}/> 
       {checked1&&<FormControlLabel sx={{margin:'auto',zIndex:0,position:'relative',textAlign:'center',bottom:100}}
         value={"yes"} control={<Switch size='medium' color='error' checked={checked1}  onChange={handleChange1}  />}
      />}
@@ -414,4 +437,5 @@ function Home() {
   }
   
   export default Home
+  
   
