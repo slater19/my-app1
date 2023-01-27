@@ -77,7 +77,7 @@ function App() {
           <Route path={"/Feed"} element={<Feed/>}></Route>
           <Route path={"/Share"} element={<Share/>}></Route>
           <Route path={"/Inbox"} element={<Inbox/>}></Route>
-          <Route path={"/Setting"} element={<Setting/>}></Route>
+          <Route path={"/settings"} element={<Setting/>}></Route>
         </Routes>  
     </div>
   )
