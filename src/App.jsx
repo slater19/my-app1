@@ -29,6 +29,7 @@ import { ScanEmail } from './components/ScanCards/ScanEmail'
  import MyCards from './components/MyCards/MyCards'
  import QrScanner from './components/QrScanner/QrScanner'
 import { Setting } from './components/Setting/Setting'
+import ExampleTrackChild  from './components/StylingComponents/Switch'
  
  
 
@@ -51,9 +52,10 @@ function App() {
         {/* <ScanEmail/> */}
         {/* <ScanDesig/> */}
         {/* <ScanCountry/> */}
-        {/* <Setting/> */}
+        <Setting/>
+        {/* <ExampleTrackChild/> */}
          
-         <Routes>
+         {/* <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/meetings" element={<Meetings />} />
@@ -78,7 +80,7 @@ function App() {
           <Route path={"/Feed"} element={<Feed/>}></Route>
           <Route path={"/Share"} element={<Share/>}></Route>
           <Route path={"/Inbox"} element={<Inbox/>}></Route>
-        </Routes>   
+        </Routes>    */}
     </div>
   )
 }

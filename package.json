@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.10.5",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/icons-material": "^5.11.0",
+    "@mui/joy": "^5.0.0-alpha.64",
     "@mui/material": "^5.11.5",
     "countries-list": "^2.6.1",
     "react": "^18.2.0",

@@ -1,20 +1,38 @@
 ._Discoverymaindiv{
-    border:1px solid red;
+    /* border:1px solid red; */
+    cursor: pointer;
 }
 ._Discoverydiv{
-    border:1px solid green;
+    /* border:1px solid green; */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 ._Discoverydivheading{
-    border:1px solid green;
+    /* border:1px solid green; */
     font-size: 30px;
     font-family: sans-serif;
     color: #054E93;
 }
 ._Discoverydivicon{
     position: relative;
-    border:5px solid firebrick;
-    font-size: 20px;   
+    /* border:1px solid rebeccapurple; */
+    height:100%;
+    /* font-size: 50px;    */
+}
+._Discoveryinfo{
+    margin-top: 5px;
+    /* border:1px solid red; */
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 500;
+    width:63%;
+}
+@media screen and (max-width:700px) {
+    ._Discoveryinfo{
+        font-size:13px;
+        width:80%;
+        font-weight: 500;
+        line-height: 1.2;
+    }
 }

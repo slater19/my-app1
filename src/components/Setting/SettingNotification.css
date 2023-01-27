@@ -1,0 +1,28 @@
+._SettingNotification{
+    border:1px soild red;
+}
+._SettingNotificationdiv{
+    /* box-shadow: rgba(60, 64, 67, 0.15) 0px 1px 3px 0px; */
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #054E93;
+}
+._SettingNotificationdiv1{
+    margin-top: 15px;
+    /* border:1px solid green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+._SettingNotificationtext>div:nth-child(1){
+    /* border:1px solid red; */
+    font-size: 20px;
+    font-family: sans-serif;
+}
+._SettingNotificationtext>div:nth-child(2){
+    margin-top: 5px;
+    /* border:1px solid red; */
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 500;
+}
