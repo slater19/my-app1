@@ -53,8 +53,7 @@ function App() {
         {/* <ScanDesig/> */}
         {/* <ScanCountry/> */}
         {/* <Setting/> */}
-        {/* <ExampleTrackChild/> */}
-         
+        {/* <ExampleTrackChild/> */} 
           <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
@@ -63,8 +62,6 @@ function App() {
           <Route path="/sendcard" element={<SendCard />} />
           <Route path="/mycards" element={<MyCards />} />
           <Route path="/qrscanner" element={<QrScanner />} />
-          
-
           <Route path={"/ScanName"} element={<ScanName/>}></Route>
           <Route path={"/ScanCards"} element={<ScanCards/>}></Route>
           <Route path={"/ScanCompany"} element={<ScanCompany/>}></Route>
@@ -85,5 +82,4 @@ function App() {
     </div>
   )
 }
-
 export default App
