@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box; 
+  }
+  .main {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;  
+    position: relative;
+    left:22px;
+    
+  }
+
+  
+  .images
+  {
+    margin: auto;
+    height: 308px;
+    text-align: center;
+    position: relative;
+    width: 330px;
+    margin-bottom: 11px;
+    z-index: 0;
+  }
+  
+  .image1
+  {
+    margin: auto;
+    height:38px;
+    position: relative;
+    top: 58px;
+    left: 150px;
+    z-index: 0;
+  }
+
+
+  .col-1 {
+    background: #fff;
+    flex: 1;
+  }
+ 
+
+ 
+
+
+ 
