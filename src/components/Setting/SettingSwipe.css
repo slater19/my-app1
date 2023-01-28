@@ -1,0 +1,30 @@
+/* ._SettingSwipemaindiv{
+    border:1px solid red;
+} */
+._SettingSwipe>div:nth-child(1){
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #054E93;
+}
+._SettingSwipe>div:nth-child(2){
+margin-top: 5px;
+    /* border: 1px solid red; */
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+._SettingLeftSwipe{
+    /* border:1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+}
+._SettingSwipetext>div:nth-child(1){
+    font-weight: 600;
+    font-family: sans-serif;
+}
+._SettingSwipetext>div:nth-child(2){
+    font-family: sans-serif;
+    font-weight: 500;
+}

@@ -1,13 +1,9 @@
 ._Setting{
-    display: flex;
-    align-items: center;
     position: relative;
     height:50px;
     gap:35%;
     box-shadow:  rgb(0 0 0 / 5%) 0px 6px 24px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 1px;
-    border: 1px solid yellow;
-    /* flex-wrap: nowrap; */
-    /* justify-content: space-around; */
+    /* border: 1px solid yellow; */
 }
 ._Setting>div{
     /* border:1px solid red; */
@@ -15,14 +11,19 @@
     font-family: sans-serif;
 }
 ._Settingheading{
-    width:55%;
-    /* text-align: center; */
+position:absolute;
+top: 50%;
+left: 50%;
+transform:translate(-50%, -50%);
+margin: 0px;
 }
 ._Settingicon{
  position: relative; 
- width:10%; 
  height: 100%;
+ /* border:1px solid red; */
+ width:10%;
 }
 /* ._Settingmaindiv{
     border:1px solid green;
 } */
+

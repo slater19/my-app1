@@ -29,6 +29,7 @@ import { ScanEmail } from './components/ScanCards/ScanEmail'
  import MyCards from './components/MyCards/MyCards'
  import QrScanner from './components/QrScanner/QrScanner'
 import { Setting } from './components/Setting/Setting'
+import ExampleTrackChild  from './components/StylingComponents/Switch'
  
  
 
@@ -52,8 +53,8 @@ function App() {
         {/* <ScanDesig/> */}
         {/* <ScanCountry/> */}
         {/* <Setting/> */}
-         
-         <Routes>
+        {/* <ExampleTrackChild/> */} 
+          <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/meetings" element={<Meetings />} />
@@ -61,8 +62,6 @@ function App() {
           <Route path="/sendcard" element={<SendCard />} />
           <Route path="/mycards" element={<MyCards />} />
           <Route path="/qrscanner" element={<QrScanner />} />
-          
-
           <Route path={"/ScanName"} element={<ScanName/>}></Route>
           <Route path={"/ScanCards"} element={<ScanCards/>}></Route>
           <Route path={"/ScanCompany"} element={<ScanCompany/>}></Route>
@@ -78,9 +77,9 @@ function App() {
           <Route path={"/Feed"} element={<Feed/>}></Route>
           <Route path={"/Share"} element={<Share/>}></Route>
           <Route path={"/Inbox"} element={<Inbox/>}></Route>
-        </Routes>   
+          <Route path={"/settings"} element={<Setting/>}></Route>
+        </Routes>  
     </div>
   )
 }
-
 export default App

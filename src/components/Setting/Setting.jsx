@@ -3,11 +3,18 @@ import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import './Setting.css'
 import { SettingDiscovery } from './SettingDiscovery';
 import { Cards } from '../StylingComponents/Cards';
+import { SettingNotification } from './SettingNotification';
+import { SettingSwipe } from './SettingSwipe';
+import { SettingLogout } from './SettingLogout';
 export const Setting = () => {
 
   let arr=[
-    <SettingDiscovery/>
+    <SettingDiscovery/>,
+    <SettingNotification/>,
+    <SettingSwipe/>,
+    <SettingLogout/>
   ]
+
   const styles={
     // border:"1px solid green",
     fontSize: "35px",
@@ -16,7 +23,7 @@ export const Setting = () => {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    
+    cursor:"pointer"
   }
   return (
     <div className='_Settingmaindiv'>
@@ -28,7 +35,7 @@ export const Setting = () => {
                 Settings
             </div>
         </div>
-        <Cards width={"90%"} comp={arr}/>
+        <Cards width={"95%"} comp={arr}/>
     </div>
   )
 }
