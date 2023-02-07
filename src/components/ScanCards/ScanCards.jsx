@@ -43,7 +43,7 @@ const clicked=()=>{
           </div>
         
         <div className='_ScanCard2'>
-          <BasicButtons click={clicked}  borderRadius={"50%"} icon={<AddCardIcon/>} height={"60px"} backgroundColor={"#21AD5A"} width={"60px"} variant={"contained"}/>
+          <BasicButtons click={clicked} borderRadius={"50%"} icon={<AddCardIcon/>} height={"60px"} backgroundColor={"#21AD5A"} width={"60px"} variant={"contained"}/>
         </div>
         
     </div>
