@@ -24,14 +24,14 @@ const SendCard = () => {const navigate = useNavigate();
         </header>
         <div className="Toolbar"/> 
         
-        <article class="main">
+        <article class="main1">
         <img  class="image1" src={myImage1}/> <br/>
 <img  class="image" src={myImage}/> <br/>  
 
 <img  class="image2" src={myImage2}/>
-  
+</article>
    <br/>   
-   </article>
+   
   <footer class="footer5">
   <div><NearMeOutlinedIcon   sx={{ 
     color: "white", 
@@ -40,7 +40,7 @@ const SendCard = () => {const navigate = useNavigate();
   }}/>
     <Box fontWeight="fontWeightLight" color='grey'>Send Card</Box></div>
     </footer>
-  
+    
 
     </div>
   )

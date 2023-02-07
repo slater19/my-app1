@@ -30,14 +30,16 @@ import { ScanEmail } from './components/ScanCards/ScanEmail'
  import QrScanner from './components/QrScanner/QrScanner'
 import { Setting } from './components/Setting/Setting'
 import ExampleTrackChild  from './components/StylingComponents/Switch'
+import Redirect from './components/Redirect/Redirect'
+ import Otp from './components/Otp/Otp'
  
- 
-
+ import Registration from './components/Registration/Registration'
 function App() {
 
   return (
     <div>
-      {/* <Profile/> */}
+      
+    {/*   {/* <Profile/> */}
       {/* <Search/> */}
       {/* <Notification/> */}
       {/* <Message/> */}
@@ -56,6 +58,7 @@ function App() {
         {/* <ExampleTrackChild/> */} 
           <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/registration" element={<Registration />} />
           <Route path="/home" element={<Home />} />
           <Route path="/meetings" element={<Meetings />} />
           <Route path="/cardbank" element={<CardBank />} />
@@ -78,7 +81,15 @@ function App() {
           <Route path={"/Share"} element={<Share/>}></Route>
           <Route path={"/Inbox"} element={<Inbox/>}></Route>
           <Route path={"/settings"} element={<Setting/>}></Route>
-        </Routes>  
+          <Route path="/otp" element={<Otp/>} />
+
+          <Route path={"/redirect"} element={<Redirect/>}></Route>
+          <Route path={"/myshop"} element={<Redirect/>}></Route>
+          <Route path={"/design"} element={<Redirect/>}></Route>
+          <Route path={"/templates"} element={<Redirect/>}></Route>
+          <Route path={"/myenqueries"} element={<Redirect/>}></Route>
+          <Route path={"/cardwizard"} element={<Redirect/>}></Route>
+        </Routes>   
     </div>
   )
 }

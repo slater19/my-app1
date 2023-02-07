@@ -21,7 +21,7 @@ function Login() {
   return (
     <div>
 
-<div className='para'>
+<div className='para1'>
 <img style={{ height:"100px", width:"100px",position:'relative',top:"130px",zIndex: 1,borderRadius:'13px' }} src={myImage1} alt="yoast seo" /> 
 </div>
        <Card variant="outlined" sx={{zIndex:0, width: 350,height:380,m:'auto',mb:'10px',position:'relative',top:73,backgroundColor:'white',borderRadius:'19px', }}>
@@ -68,14 +68,14 @@ function Login() {
     backgroundColor:'red',
     borderRadius: '100px',
     margin:'auto',
-  }} onClick={() => navigate("/home")}>Sign in</Button>
+  }} onClick={() => navigate("/registration")}>Sign in</Button>
 
-<p class="para"> Or with social</p>
-<div class="para">
-<a href="#" class="fa fa-facebook"></a>  
-<a href="#" class="fa fa-twitter"></a>  
-<a href="#" class="fa fa-google"> </a>   
-<a href="#" class="fa fa-linkedin"></a>  
+<p class="para1" > Or with social</p>
+<div class="para1" >
+<a href="#" class="fa fa-facebook" onClick={() => navigate("/redirect")}></a>  
+<a href="#" class="fa fa-twitter" onClick={() => navigate("/redirect")}></a>  
+<a href="#" class="fa fa-google" onClick={() => navigate("/redirect")}> </a>   
+<a href="#" class="fa fa-linkedin" onClick={() => navigate("/redirect")}></a>  
 </div>        
          </Card><br/>
          <Typography sx={{textAlign: "center",

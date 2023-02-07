@@ -66,19 +66,39 @@ import users from '../Data/data';
 import {useState} from "react";
 import { useSwipeable } from "react-swipeable";
 import './Homepage';
+
 import Homepage from './Homepage';
 
 
+
+
+import TextField from '@mui/material/TextField';
+
+import InputAdornment from '@mui/material/InputAdornment';
+
+
+/* import Dialog from './Dialog';
+import {MdAttachFile} from 'react-icons/md';
+
+import {AiOutlineCloseCircle} from 'react-icons/ai';
+ */
+
+
+
 function Home() {
+  const [open, setOpen] = React.useState(false);
+  
+  const handleClose = () => setOpen(false);
 
 const [opens,setOpens]=React.useState(false);
+const [open1, setOpen1] = React.useState(false);
 const navigate = useNavigate();
 const [state, setState] = React.useState({
   checkedA: true,
 });
+const mycards=users;
 
-
-const [currImg, setCurrImg] = useState(1);
+const [currImg, setCurrImg] = useState(5);
 
 const handlersBox = useSwipeable({
   
@@ -86,13 +106,30 @@ const handlersBox = useSwipeable({
     // NOTE: this stops the propagation of the event
     // from reaching the document swipe listeners
     event.stopPropagation();
-    if(dir==='Right'){currImg < data.length - 1 && setCurrImg(currImg+1);}
-    if(dir==='Left'){ currImg > 0 && setCurrImg(currImg-1);}
-  
-    },
+    if(dir==='Right'){
+    if(currImg < mycards.length - 1){ setCurrImg(currImg+1);
+    const x=mycards.splice(currImg,1);
+    setOpen1(true);
+    
+  }
+    }
+    
+    if(dir==='Left')
+    { 
+      if(currImg > 0)  {
+        
+        const x=mycards.splice(currImg,1); 
+        setCurrImg(currImg-1);
+      }
+    
+     
+    
+    }
    // NOTE: another approach via onSwiping
   // onSwiping: ({ event }) => event.stopPropagation(),
-  preventDefaultTouchmoveEvent: true
+  
+},
+preventDefaultTouchmoveEvent: true
 });
 
 
@@ -365,7 +402,102 @@ return (
  
  
      
-    <img class="image" src={users[currImg].img}/> 
+    <img class="image" src={mycards[currImg].img}/>
+  {/*   <Dialog 
+        PaperProps={{
+          sx: {
+            width: "90%",
+            height: "50%",
+            borderRadius: 5,
+            position:'relative',
+            bottom:50,
+            right:10 
+          }
+        }}
+        open={open1}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box>
+          <Typography sx={{ ml: 2,mt:2 }} id="modal-modal-title" variant="h6" component="h2">
+            Send Card <AiOutlineCloseCircle  sx={{
+              position: 'relative',left: '160px',top:'2px',color:'red',size:"30px"}}/>
+          </Typography>
+          
+          <Typography id="modal-modal-description" variant="h6" component="h2" sx={{ mt:5,ml:2 }}>
+            Message
+          </Typography>
+
+          <TextField  defaultValue="Hello World" multiline={true}
+         rows={3}
+        sx={{marginLeft:3,
+      width:"84%",
+      marginTop:1,
+      borderRadius:5,
+      height:100
+      
+        
+    }}
+    InputProps={{
+        style: {
+            color: "black",
+            
+            
+            
+        }
+    }}
+/>
+
+<TextField defaultValue="Hello World" multiline={true}
+         rows={1}
+        sx={{marginLeft:3,
+      width:"84%",
+      marginTop:3,
+      borderRadius:5,
+      
+      
+        
+    }}
+    InputProps={{ endAdornment: (
+      <InputAdornment position="end">
+        <MdAttachFile size='30px'
+         />
+      </InputAdornment>
+    ),
+        style: {
+            color: "black",
+            
+            
+            
+        }
+    }}
+    endAdornment={
+      <InputAdornment position="end">
+        <MdAttachFile/></InputAdornment>
+         
+        
+      
+    }
+/>
+
+<Button variant="contained" sx={{
+    width: '300px',
+    color: 'white',
+    backgroundColor:'red',
+    borderRadius: '100px',
+    margin:'auto',
+    height:'48px',mt:3,ml:3
+  }}>Submit</Button>
+         
+        </Box>
+     
+                   
+                  
+                
+              
+           
+      </Dialog>  */}
     {checked1&&<FormControlLabel sx={{margin:'auto',zIndex:0,position:'relative',textAlign:'center',bottom:100}}
       value={"yes"} control={<Switch size='medium' color='error' checked={checked1}  onChange={handleChange1}  />}
    />}
