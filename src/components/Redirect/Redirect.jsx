@@ -7,12 +7,12 @@ const Redirect = () => {
      
 
 
-{/* <div class="overlay"></div> */}
-<main class="mainframe">
+{/* <div className="overlay"></div> */}
+<main className="mainframe">
 
-	<section class="contacts">
-		<h1 class="titles">Awesome Thing</h1>
-		<h2 class="sub-titles">Site Under Construction</h2>
+	<section className="contacts">
+		<h1 className="titles">Awesome Thing</h1>
+		<h2 className="sub-titles">Site Under Construction</h2>
 	</section>
 </main>
     </div>
