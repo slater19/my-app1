@@ -17,10 +17,82 @@ import MenuItem from '@mui/material/MenuItem';
 
 import Select from '@mui/material/Select';
 
+import TextField from '@mui/material/TextField';
+
+import countries from 'countries-list';
+import countryCodes from 'country-codes-list';
+
+
+
 
 
 
 function Registration() {const navigate = useNavigate();
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  const [country, setCountry] = React.useState('');
+  const [phone, setPhone] = React.useState('');
+  const [first, setFirst] = React.useState('');
+  const [last, setLast] = React.useState('');
+  const [gender, setGender] = React.useState('');
+  const [email, setEmail] = React.useState('');
+
+  const myCountryCodes = Object.values(countryCodes.customList('countryCode', '{countryNameEn} ({countryCode})+{countryCallingCode}'));
+  const gender1=['Select Gender','Male','Female','Company'];
+  const handleChange = (event) => {
+    setCountry(event.target.value);
+  };
+  
+  const handleChange1 = (event) => {
+    setPhone(event.target.value);
+  };
+
+  const handleChange2 = (event) => {
+    setFirst(event.target.value);
+  };
+  
+  const handleChange3 = (event) => {
+    setLast(event.target.value);
+  };
+
+  const handleChange4 = (event) => {
+    setGender(event.target.value);
+  };
+  
+  const handleChange5 = (event) => {
+    setEmail(event.target.value);
+  };
+
+  
+  
+  
+  
   return (
     <div>
      <header className="Navbar">
@@ -38,107 +110,109 @@ function Registration() {const navigate = useNavigate();
         <Card variant="outlined" sx={{zIndex:0, width: 350,height:616,m:'auto',mb:'10px',position:'relative',top:4,backgroundColor:'white',borderRadius:'19px', }}>
        
 
-       <FormControl sx={{mt:4, ml: 4, width: '31ch' }} variant="standard">
-         
-         <Input
-           placeholder=""
-           id="standard-adornment-password"
-           type='text'
-           startAdornment={
-             <InputAdornment position="start">
-              
-                
-               
-             </InputAdornment>
-           }
-         />
-       </FormControl>
+    
 
-       <FormControl sx={{mt:4, ml: 4,mb:5, width: '31ch' }} variant="standard">
-         
-         <Input
-           placeholder="Phone Number"
-           id="standard-adornment-password"
-           type='text'
-           startAdornment={
-             <InputAdornment position="start">
-               <PhoneAndroidTwoToneIcon/></InputAdornment>
-                
-               
-             
-           }
-         />
-       </FormControl>
+<div>
+<TextField  sx={{mt:4, ml: 4,mb:1, width: '31ch' }} 
+         required
+          id="standard-select-currency"
+          select
+          label="Select"
+          
+          value={country}
+          onChange={handleChange}>
+          {myCountryCodes.map((option,i) => (
+            <MenuItem key={i} value={option}>
+              {option}
+            </MenuItem>
+          ))}
+        </TextField>
 
-       <FormControl sx={{mt:4, ml: 4,mb:5, width: '31ch' }} variant="standard">
-         
-         <Input
-           placeholder="First Name"
-           id="standard-adornment-password"
-           type='text'
-           startAdornment={
-             <InputAdornment position="start">
-               <MdOutlinePerson/></InputAdornment>
-                
-               
-             
-           }
-         />
-       </FormControl>
 
-       <FormControl sx={{mt:4, ml: 4, width: '31ch' }} variant="standard">
-         
-         <Input
-           placeholder="Last Name"
-           id="standard-adornment-password"
-           type='text'
-           startAdornment={
-             <InputAdornment position="start">
-               <MdOutlinePerson/></InputAdornment>
-                
-               
-             
-           }
-         />
-       </FormControl>
 
-       <FormControl sx={{ ml: 4,mb:5, width: '31ch' }} variant="standard">
-       
-       <InputLabel id="demo-simple-select-standard-label" 
-                
-               
-             
-           ><MdOutlinePerson/> <b>Select Gender</b></InputLabel>
-     <Select
-          labelId="demo-simple-select-standard-label"
-          id="demo-simple-select-standard"
-         
-          label="Age"
-        > 
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-        </Select> 
-       </FormControl>
 
-       <FormControl sx={{mt:4, ml: 4,mb:5, width: '31ch' }} variant="standard">
-         
-         <Input
-           placeholder="Email Address"
-           id="standard-adornment-password"
-           type='text'
-           startAdornment={
-             <InputAdornment position="start">
-               <AiOutlineMail/></InputAdornment>
-                
-               
-             
-           }
-         />
-       </FormControl>
+<TextField sx={{mt:4, ml: 4,mb:1, width: '31ch' }} 
+        required
+        variant="standard"
+        id="input-with-icon-textfield"
+        label="TextField"
+        value={phone}
+          onChange={handleChange1}
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <PhoneAndroidTwoToneIcon/>
+            </InputAdornment>
+          ),
+        }}
+      />
+
+<TextField sx={{mt:4, ml: 4,mb:1, width: '31ch' }} 
+        required
+        variant="standard"
+        id="input-with-icon-textfield"
+        label="TextField"
+        value={first}
+          onChange={handleChange2}
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <MdOutlinePerson/>
+            </InputAdornment>
+          ),
+        }}
+      />
+
+<TextField sx={{mt:4, ml: 4,mb:1, width: '31ch' }} 
+        required
+        variant="standard"
+        id="input-with-icon-textfield"
+        label="TextField"
+        value={last}
+          onChange={handleChange3}
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <MdOutlinePerson/>
+            </InputAdornment>
+          ),
+        }}
+      />
+
+<TextField  sx={{mt:4, ml: 4,mb:1, width: '31ch' }} 
+         required
+         variant="standard"
+          id="standard-select-currency"
+          select
+          label="Select"
+          
+          value={gender}
+          onChange={handleChange4}>
+          {gender1.map((option,i) => (
+            <MenuItem key={i} value={option}>
+              {option}
+            </MenuItem>
+          ))}
+        </TextField>
+
+
+
+
+<TextField sx={{mt:1, ml: 4,mb:1, width: '31ch' }} 
+        required
+        variant="standard"
+        id="input-with-icon-textfield"
+        label="TextField"
+        value={email}
+          onChange={handleChange5}
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <AiOutlineMail/>
+            </InputAdornment>
+          ),
+        }}
+      />
     
        
 
@@ -151,7 +225,7 @@ function Registration() {const navigate = useNavigate();
    margin:'auto',
  }} onClick={() => navigate("/home")}>Continue</Button>
 
-
+</div>
         </Card>
      
      

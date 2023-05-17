@@ -18,7 +18,10 @@ body {
     box-shadow: 0px 0px 5px silver;
   }
 
- 
+  .Title {
+    flex-grow: 1;
+    text-align: center;
+  } 
   
   .Toolbar {
     display: flex;
@@ -62,9 +65,12 @@ body {
 
 .footer1 div{ margin: 30px; text-align: center;}
   
+ .footer1{ margin-top: 5px;}
+  
   .Title {
     flex-grow: 1;
     text-align: center;
+   
   } 
   
   .face{
@@ -74,3 +80,35 @@ body {
     border-radius: 23px;
   }
   
+  .tab{
+  
+  overflow-y: scroll;
+  }
+
+  .face9{
+    height: 50px;
+    margin-right: 3px;
+    border-radius: 100%;
+    width: 50px;
+
+  }
+
+  .cflex{
+  display: flex;
+  flex-direction: row;  
+  margin-bottom: 7px;
+  }
+
+  .button4{
+    position: relative;
+    background-color: #feffff;
+    left:58%;
+    top:10px;
+    border: 1px solid gray;
+    border-radius:30px;
+    min-width: 40px;
+    padding:10px;
+    min-height:22px; 
+    color:gray;
+    
+    }

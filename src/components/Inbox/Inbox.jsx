@@ -19,6 +19,7 @@ setmove(true)
     setchange(false)
   }
 
+  var result3= "https://cors-anywhere-solai.fly.dev/http://65.2.28.163";
   return (
     <div className='_Inboxmaindiv'>
         <div className='_Inboxdiv'>

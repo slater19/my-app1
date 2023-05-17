@@ -1,0 +1,164 @@
+.circle-icon {
+    background: red;
+    height: 30px;
+    border-radius: 50%;
+    margin-bottom: 11px;
+    }
+
+.main3
+{
+display: flex;
+flex-flow: column;
+margin: auto;
+position: relative;
+top: 90px;
+width: 370px;
+height: 480px;
+left: 64px;
+}
+
+.image9
+{
+  margin: auto;
+  height:500px;
+  text-align: center;
+  position: relative;
+  top: 20px;
+  /* right: 10px; */
+  margin-bottom: 11px;
+  z-index: -1;
+  border-radius: 20px;
+  border: transparent;
+  
+}
+
+
+.main7
+{
+
+position: relative;
+display: inline-block;
+width: 430px;
+height: 480px;
+left: 71px;
+
+/*   top: 50%;
+left:50%; */
+
+/* margin: auto; */
+}
+
+  .image5
+  {
+    
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    right:50px;
+    
+    z-index: 0;
+  } 
+
+.thecard3{
+z-index: 1;
+position: absolute;
+
+right: 62px;
+width: 100%;
+height: 100%;
+top:10px;
+border-radius: 10px;
+transform-style: preserve-3d;
+transition: all 4s ease;
+perspective: 1000px;
+margin: auto;
+
+}
+
+
+
+
+.isflipped3 {
+z-index: 1;
+position: absolute;
+right: 62px;
+top: 10px;
+margin: auto;
+width: 100%;
+height: 100%;
+border-radius: 10px;
+transform-style: preserve-3d;
+transition: all 4s ease;
+perspective: 1000px;
+transform: rotateY(180deg);
+
+}
+
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+.thefront3{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+
+border-radius: 10px;
+ backface-visibility: hidden; 
+overflow: hidden;
+/* background: #ffc728; */
+color: #000;
+}
+
+/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+.theback3{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+
+border-radius: 10px;
+ backface-visibility: hidden; 
+overflow: hidden;
+/* background: #fafafa; */
+color: #333;
+text-align: center;
+transform: rotateY(180deg);
+}
+
+.image3
+{
+  
+  height:38px;
+  margin: auto;
+  position: relative;
+  bottom: 212px;
+  left: 129px;
+  z-index: 2;
+}
+.image2
+{
+  margin: auto;
+  height: 11px;
+  text-align: center;
+  position: relative;
+  top: 20px;
+  /* right: 10px; */
+  
+}
+
+.footer5{
+   
+   display: flex;
+    
+    list-style: none;
+    margin: 0;  
+    position: relative;
+    top: 11px;
+    /* right: 6px; */
+    
+  }
+  
+  .footer5 div{ margin: auto;text-align: center;}

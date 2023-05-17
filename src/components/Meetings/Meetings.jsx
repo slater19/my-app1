@@ -26,7 +26,7 @@ function Meetings() {
      <header className="Navbar">
           <div className="Toolbar">
            
-            <div className="Title"> Meetings </div>
+            <div className="Title">Meetings</div>
            
           </div>
         </header>
@@ -42,10 +42,10 @@ function Meetings() {
           
         
         
-            {!value &&<div><Typography sx={{position:"fixed", top:"50%",left:"50%"}}>No Upcoming Meetings</Typography></div>}
+            {!value &&<div  style={{display: "flex",justifyContent:"center",alignItems:"center"}}><Typography /* sx={{position:"fixed", top:"50%",left:"50%"}} */>No Upcoming Meetings</Typography></div>}
         
         
-            {value>0 && <div><Typography sx={{position:"fixed", top:"50%",left:"50%"}}>No Past Meetings</Typography></div>}
+            {value==1 && <div style={{display: "flex",justifyContent:"center",alignItems:"center"}}><Typography /* sx={{position:"fixed", top:"50%",left:"50%"}} */>No Past Meetings</Typography></div>}
         
         
 

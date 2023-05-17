@@ -27,6 +27,31 @@ margin: auto;
   
 }
 
+.smain3
+{
+display: flex;
+flex-flow: column;
+margin: auto;
+position: relative;
+top: 90px;
+width: 370px;
+height: 480px;
+
+
+
+}
+
+.simage3
+{
+  
+  height:38px;
+  margin: auto;
+  position: relative;
+  bottom: 221px;
+  left: 180px;
+  z-index: 2;
+}
+
 .image1
 {
   
@@ -48,16 +73,206 @@ margin: auto;
   
 }
 
-.footer5{
+.sfooter5{
    
-   display: flex;
-    
+   
+    display: flex;
     list-style: none;
     margin: 0;  
     position: relative;
-    top: 11px;
+    top: 112px;
     /* right: 6px; */
+    
     
   }
   
-  .footer5 div{ margin: auto;text-align: center;}
+  .sfooter5 div{ margin: auto;text-align: center;}
+
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+}
+.carousel_container
+{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 940px;
+	overflow: hidden;	
+}
+
+.carousel_items
+{
+	position: relative;
+	cursor: default !important;
+}
+
+.carousel_item
+{
+	float:left;
+  border: 0px solid #cc0000;
+}
+
+.item_arrows
+{
+	position: absolute;
+	top: 200px;
+	width: 100%;
+  height: 1px;
+	z-index: 5000;
+  border: 0px solid green;
+}
+
+.item_arrow
+{
+	position: absolute;
+	width: 45px;
+	height: 65px;
+	/*
+  background-color: #2d96cd;
+	*/
+  margin-bottom: 1px;
+	float: left;
+}
+
+.nav_dot:hover,
+.item_arrow:hover
+{
+	cursor: pointer;
+}
+
+.item_next
+{
+	left: 900px;
+  top: 0px;
+  background-color: #2d96cd;
+}
+
+.item_prev
+{
+  display: none;
+  left: 900px;
+  top: 66px;
+  background-color: #000;
+}
+
+.fa
+{
+	color: #fff;
+	font-size: 3em;
+	margin-left: 14px;
+	margin-top: 10px;	
+}
+
+.nav_dots
+{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 50001;
+  top:13px;
+}
+
+.nav_dot
+{
+	width: 6px;
+	height: 6px;
+	float: left;
+	border: 1px solid gray;
+	background-color: white;
+	margin-left: 5px;	
+	border-radius: 50%;    
+}
+
+.nav_dot1
+{
+	width: 6px;
+	height: 6px;
+	float: left;
+	border: 1px solid gray;
+	background-color: red;
+	margin-left: 5px;	
+	border-radius: 50%;    
+}
+
+
+.grab 
+{
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+}
+
+.grabbing
+{
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+}
+
+
+.sthecard3{
+  z-index: 1;
+  position: absolute;
+  
+  /* right: 62px; */
+  width: 100%;
+  height: 100%;
+  /* top:10px; */
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: all 4s ease;
+  perspective: 1000px;
+  margin: auto;
+  
+  }
+  
+  
+  
+  
+  .sisflipped3 {
+  z-index: 1;
+  position: absolute;
+  /* right: 62px; */
+  /* top: 10px; */
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: all 4s ease;
+  perspective: 1000px;
+  transform: rotateY(180deg);
+  
+  }
+  
+  /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+  .sthefront3{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  border-radius: 10px;
+   backface-visibility: hidden; 
+  overflow: hidden;
+  /* background: #ffc728; */
+  color: #000;
+  }
+  
+  /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+  .stheback3{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  border-radius: 10px;
+   backface-visibility: hidden; 
+  overflow: hidden;
+  /* background: #fafafa; */
+  color: #333;
+  text-align: center;
+  transform: rotateY(180deg);
+  }

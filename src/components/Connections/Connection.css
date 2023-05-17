@@ -1,0 +1,58 @@
+.ImageAndNamemaindiv{
+    /* border:1px solid red; */
+    width:140px;
+    height:200px;
+    
+}
+.ImageAndNameimage{
+    /* border:1px solid green; */
+    width:100%;
+    height:110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ImageAndNameimage1{
+    /* border:1px solid orangered; */
+    width:110px;
+    height:110px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.ImageAndNameimage1>img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+.ImageAndNamemaindiv>div:nth-child(3){
+/* border:1px solid green; */
+margin-top: 7px;
+}
+.ImageAndNameName{
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+}
+.ImageAndNameName1{
+    font-family: sans-serif;
+    font-weight: 100;
+    text-align: center;
+    font-size: 14px;
+}
+.ImageAndNameProfession{
+    font-family: sans-serif;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 100;
+}
+.ImageAndNameConnection{
+    text-align: center;
+}
+.cflexbox-container1 {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    justify-content:space-evenly
+  }

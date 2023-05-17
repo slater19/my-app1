@@ -1,0 +1,142 @@
+body {
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+  }
+ 
+  .signup-box {
+    width: 320px;
+    height: 410px;
+    margin:auto;
+    border: 0.5px solid Grey; 
+    background-color: white;
+    padding-top: 100px;
+    text-align: center;
+    border-radius: 14px;
+    position: relative;
+    top: 100px;
+  }
+  
+
+
+  .image
+  {
+    width: 100px;
+    height: 100px;
+
+    text-align: center;
+   
+  }  
+
+  
+  h5{text-align: center;
+    position: relative;
+    top: 50px;
+    color:'grey';
+  }
+ 
+
+ 
+  
+  h1 {
+    text-align: center;
+    padding-top: 15px;
+  }
+  
+  h4 {
+    text-align: center;
+  }
+  
+  form {
+    width: 300px;
+    margin-left: 20px;
+  }
+
+  .inputbox{
+    width: calc(100% - 40px);
+    height: 30px;
+    display: block;
+    margin: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    
+   }
+   
+   .para1{
+    text-align: center;
+    
+    }
+   
+   .fa {  
+    padding: 10px;  
+    text-align: center;  
+    margin: 5px 5px;  
+    font-size: 10px;  
+    width: 5px;
+    border-radius: 100px;  
+    background-color: white;
+    border: 1px solid  grey;
+  }  
+  .fa-google {  
+      
+    color: blue;  
+  }  
+   
+   .fa-facebook {  
+    
+    color: blue;  
+  }  
+  .fa-twitter {  
+     
+    color: blue;  
+  }  
+
+  .fa-linkedin {  
+    
+    color: blue;  
+  }  
+ 
+
+  
+ 
+
+  form input {
+    width: 100%;
+    
+    outline: none;
+  }
+  input[type=text] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+}
+
+
+
+  input[type="button"] {
+    width: 280px;
+    border-radius: 100px;
+    margin-top: 20px;
+    height:41px;
+    background-color:red;
+    color: white;
+    font-size: 18px;
+    border-color: transparent;
+  }
+  p {
+    
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+    
+  }
+  .para-2 {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-top: -10px;
+  }
+  .para-2 a {
+    color: red;
+  }
+  
+  

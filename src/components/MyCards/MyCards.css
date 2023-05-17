@@ -6,12 +6,14 @@
     color: white;
     }
 
-.main
+.main99
 {
 display: flex;
 flex-flow: column;
 margin-right: 37px;
 margin-left: 37px;
+
+top: 50px;
 }
 
 .image
@@ -27,6 +29,19 @@ margin-left: 37px;
   border-radius: 20px;
   border: transparent;
   
+}
+
+.main3
+{
+display: flex;
+flex-flow: column;
+margin: auto;
+position: relative;
+top: 90px;
+width: 370px;
+height: 480px;
+left: 64px;
+
 }
 
 .image1
@@ -65,23 +80,104 @@ margin-left: 37px;
   transform: translate(0%, -50%);
 }
 
-.footer{
+.footer1{
     display: flex;
     flex-flow: row;
     list-style: none;
     margin: 0;  
     position: relative;
-    top: 11px;
+    
     left:50px;
     justify-content: center;
     
-    
+    top: 100px;
   }
   
-  .footer div{margin: 20px; text-align: center;}
+  .footer1 div{margin: 20px; text-align: center;
+  
+}
+
+.thecard3{
+  z-index: 1;
+  position: absolute;
+  
+  /* right: 62px; */
+  width: 100%;
+  height: 100%;
+  /* top:10px; */
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: all 4s ease;
+  perspective: 1000px;
+  margin: auto;
+  
+  }
+  
+  
+  
+  
+  .isflipped3 {
+  z-index: 1;
+  position: absolute;
+/*   right: 62px;
+  top: 10px; */
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: all 4s ease;
+  perspective: 1000px;
+  transform: rotateY(180deg);
+  
+  }
+  
+  /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+  .thefront3{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  border-radius: 10px;
+   backface-visibility: hidden; 
+  overflow: hidden;
+  /* background: #ffc728; */
+  color: #000;
+  }
+  
+  /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+  .theback3{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  border-radius: 10px;
+   backface-visibility: hidden; 
+  overflow: hidden;
+  /* background: #fafafa; */
+  color: #333;
+  text-align: center;
+  transform: rotateY(180deg);
+  }
+  
+  .image3
+  {
+    
+    height:38px;
+    margin: auto;
+    position: relative;
+    bottom: 212px;
+    left: 129px;
+    z-index: 2;
+  }
 
 
-  .flexbox-container {
+
+  .flexbox-container1 {
     display: flex;
     flex-direction: row;
     justify-content: center;

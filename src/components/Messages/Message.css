@@ -2,30 +2,30 @@
     border:1px solid red;
 } */
 
-._MessageDiv1{
+.messageDiv1{
     /* border:1px solid green; */
     display: flex;
     height:50px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
-._MessageDiv1>div:nth-child(1){
+.messageDiv1>div:nth-child(1){
     /* border:1px solid yellow; */
     width:20%;
 }
-._MessageDiv1>div:nth-child(2){
+.messageDiv1>div:nth-child(2){
     /* border:1px solid green; */
     width:60%;
 }
 
-._MessageDiv1>div:nth-child(3){
+.messageDiv1>div:nth-child(3){
     /* border:1px solid violet; */
     width:20%;
 }
 
-._MessageDiv2{
-    /* border:1px solid green; */
+.messageDiv2{
+    
     height:200px;
-    width:40%;
+    width:90%;
     margin:auto;
     margin-top: 10px;
     display: flex;
@@ -35,49 +35,54 @@
     background-color: #ECEDEF;
     border-radius: 15px;
 }
-._MessageDiv12{
-    /* border:1px solid black; */
+.messageDiv12{
+    
     width:95%;
     display: flex;
     gap:20px;
+    height: 70%;
 }
-._MessageImage{
-    /* border:1px solid olive; */
+.NmessageImage{
+    
     width:70px;
     height:70px;
     border-radius:50%;
     overflow: hidden;
 }
-._MessageDiv121{
-    /* border:1px solid red; */
-    width:100%;
+.messageDiv121{
+    
+    width:80%;
     font-family: sans-serif;
 }
-._MessageDiv121>div>p{
+.messageDiv121>div>p{
     text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
 }
-._MessageDiv121>div:nth-child(1){
-    /* border:1px solid green; */
+.messageDiv121>div:nth-child(1){
+    
     font-family: sans-serif;
     font-size: 20px;
     font-weight: 600;
 }
-._MessageImage>img{
+.NmessageImage>img{
 height:100%;
 width:100%;
 }
-._MessageDiv1>div{
+.messageDiv1>div{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-._MessageDiv1>div:nth-child(2){
+.messageDiv1>div:nth-child(2){
     font-size: 25px;
     font-family: sans-serif;
 }
 
-@media screen and (max-width:700px) {
+/* @media screen and (max-width:700px) {
     ._MessageDiv2{
         width:90%;
     }
-}
+} */

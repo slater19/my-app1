@@ -31,15 +31,25 @@ import { ScanEmail } from './components/ScanCards/ScanEmail'
 import { Setting } from './components/Setting/Setting'
 import ExampleTrackChild  from './components/StylingComponents/Switch'
 import Redirect from './components/Redirect/Redirect'
- import Otp from './components/Otp/Otp'
+import Otp from './components/Otp/Otp'
+import Registration from './components/Registration/Registration'
+import Chat from './components/chat/Chat'
+import CardView from './components/CardBank/CardView'
+import { Inbox1 } from './components/Inbox/Inbox1'
+import Conncection from './components/Connections/Conncection'
+
+
+
+
  
- import Registration from './components/Registration/Registration'
+ 
 function App() {
 
   return (
     <div>
+    
       
-    {/*   {/* <Profile/> */}
+   {/*  {/*   {/* <Profile/> */}
       {/* <Search/> */}
       {/* <Notification/> */}
       {/* <Message/> */}
@@ -56,12 +66,13 @@ function App() {
         {/* <ScanCountry/> */}
         {/* <Setting/> */}
         {/* <ExampleTrackChild/> */} 
-          <Routes>
-          <Route path="/" element={<Login />} />
+           <Routes>
+             
+          <Route exact path="/" element={<Login />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/home" element={<Home />} />
           <Route path="/meetings" element={<Meetings />} />
-          <Route path="/cardbank" element={<CardBank />} />
+          
           <Route path="/sendcard" element={<SendCard />} />
           <Route path="/mycards" element={<MyCards />} />
           <Route path="/qrscanner" element={<QrScanner />} />
@@ -89,6 +100,18 @@ function App() {
           <Route path={"/templates"} element={<Redirect/>}></Route>
           <Route path={"/myenqueries"} element={<Redirect/>}></Route>
           <Route path={"/cardwizard"} element={<Redirect/>}></Route>
+ 
+      <Route path={"/Inbox"} element={<Inbox/>}></Route>
+         <Route path="/home" element={<Home />} />
+         <Route path="/conncection" element={<Conncection />} />
+         <Route path="/sendcard" element={<SendCard />} />
+          <Route path="/mycards" element={<MyCards />} />
+          <Route path="/chat" element={<Chat />} />
+          <Route path="/message" element={<Message />} />
+          <Route path="/cardbank" element={<CardBank />} />
+          <Route path="/meetings" element={<Meetings />} />
+          <Route path="/cardview" element={<CardView />} />
+          <Route path={"/Inbox1"} element={<Inbox1/>}></Route>
         </Routes>   
     </div>
   )

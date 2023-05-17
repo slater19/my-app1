@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Login.css';
 import myImage1 from '../../Images/Artboard.png';
 import {SiAddthis} from 'react-icons/si';
@@ -14,48 +14,86 @@ import FormControl from '@mui/material/FormControl';
 import CardMedia from '@mui/material/CardMedia';
 import PhoneAndroidTwoToneIcon from '@mui/icons-material/PhoneAndroidTwoTone';
 import { useNavigate } from "react-router-dom";
-
-
+import { loginURL } from '../../Config/ApiUrls';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import countries from 'countries-list';
 import countryCodes from 'country-codes-list';
-
-
-
-
-
-
-
-
-
+import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import {check} from '../../Store/Slices/LoginSlice.jsx';
 
 function Login() {
   const navigate = useNavigate();
   const [country, setCountry] = React.useState('');
   const [phone, setPhone] = React.useState('');
-  
-  const countryCodes1 = Object.keys(countries.countries);
-
+  const [input,setinput]=React.useState(false);
+  // const [pin,setpin]=React.useState(false);
+  const [change,setchange]=React.useState(false);
+  // const [apidata,setapidata]=React.useState('');
+  // const [Password,setpassword]=React.useState('');
+  // const [encrypt,setencrypt]=React.useState('');
   const myCountryCodes = Object.values(countryCodes.customList('countryCode', '{countryNameEn} ({countryCode})+{countryCallingCode}'));
+  // const info =useSelector((store)=>{store.LoggedIns})
+  
+  const dispatch =useDispatch();
 
-  
-    const countryNames = countryCodes1.map(code => countries.countries[code].name);
-  
+
     const handleChange = (event) => {
     setCountry(event.target.value);
   };
-  
+
   const handleChange1 = (event) => {
-    setPhone(event.target.value);
-  };
+    setPhone(event.target.value);   
+  }
 
+  // useEffect(()=>{
+  //   setpin(country.split("+")[1]);
+  //   setchange(!change)
+  // },[country])
 
-console.log(phone);
-console.log(country);
+//   useEffect(()=>{
+// setapidata(pin+phone)
+//   },[change])
   
-  
-  
+// useEffect(()=>{
+// setpassword(window.btoa(window.btoa(apidata)))
+// },[input])
+
+// console.log("pin",pin)
+// console.log("passout",Password)
+
+// console.log("apidata",apidata)
+//  console.log("pass",password) 
+
+  const SignIn=(e)=>{
+    e.preventDefault();
+    const pin =country.split("+")[1]
+    // setinput(!input)
+    const Password =window.btoa(window.btoa(pin+phone))
+    let urlencoded = new URLSearchParams();
+urlencoded.append("countryCode", pin);
+urlencoded.append("phoneNo", phone);
+urlencoded.append("password", Password);
+urlencoded.append("appVersion", "2.0");
+console.log("passin",Password)
+axios.post(loginURL,
+  urlencoded,{
+headers:{
+    key: "Content-Type",
+    value: "application/x-www-form-urlencoded"
+  }
+}
+).then((data)=>{
+  dispatch(check(data))
+  console.log("data",data)
+  console.log("info",pin,phone,Password)
+// console.log("info",info)
+}).catch((err)=>{
+console.log("error",err)
+})
+  }
+ 
   
   return (
     <div>
@@ -67,14 +105,13 @@ console.log(country);
        
 
      
-        <form  method="POST" autoComplete="off">
+        <form method="POST" autoComplete="off" >
 <div>
 <TextField  sx={{mt:4, ml: 4,mb:5, width: '31ch' }} 
          required
           id="standard-select-currency"
           select
           label="Select"
-          
           value={country}
           onChange={handleChange}>
           {myCountryCodes.map((option,i) => (
@@ -84,16 +121,13 @@ console.log(country);
           ))}
         </TextField>
 
-
-
-
 <TextField sx={{mt:4, ml: 4,mb:1, width: '31ch' }} 
         required
         variant="standard"
         id="input-with-icon-textfield"
         label="TextField"
         value={phone}
-          onChange={handleChange1}
+        onChange={handleChange1}
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
@@ -102,11 +136,7 @@ console.log(country);
           ),
         }}
       />
-
-        
-     
-        
-
+      
         <Button type='submit' variant="contained" size='large' sx={{
     position:"relative",left: '15px',
     width: 310, padding: 1,
@@ -114,7 +144,7 @@ console.log(country);
     backgroundColor:'red',
     borderRadius: '100px',
     margin:'auto',
-  }} onClick={() => navigate("/registration")}>Sign in</Button>
+  }} onClick={(e) =>{SignIn(e)}}>Sign in</Button>
   </div>
   </form>
 

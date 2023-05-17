@@ -1,28 +1,33 @@
 * {
     box-sizing: border-box; 
   }
-  .main {
+  .page {
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-evenly;
     list-style: none;
-    margin: 0;  
+    margin: auto;  
     position: relative;
-    left:22px;
+    justify-content: center;
     
-  }
+    /* right: 18px; */
+    }
 
   
-  .images
+  .imgs
   {
-    margin: auto;
-    height: 308px;
-    text-align: center;
+    /* margin: auto;
+    height: 430px; */
+    height: 100%;
+  width: 100%;
+  /*   text-align: center;
     position: relative;
-    width: 330px;
-    margin-bottom: 11px;
-    z-index: 0;
+    width: 480px; */
+    /* margin-bottom: 11px; */
+   /*  z-index: 0; */
+   object-fit: cover;
+   
   }
   
   .image1
